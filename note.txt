@@ -1,0 +1,1263 @@
+Course Structure :-
+
+- WEB APPLICATION
+
+- FRONTEND  -  ANGULAR, REACT - HTML, CSS, BOOTSTRAP, JAVASCRIPT
+-BACKEND  - SERVER - EXPRESS,JS, NODE.JS
+                   - DATABASE  - MONGODB
+
+--------------------------------------------------------------------------------
+COMMAND LINES :-
+
+pwd :- Current directory
+cd  :- change directory
+cd .. :- Go to parent directory
+ls :- list items in directory
+touch :- create a file 
+mkdir :- create a directory
+cp :- Copy files 
+mv :- Moves files 
+rm :- Remove files
+rmdir :- Remove directories
+
+-------------------------------------------------------------------------------
+
+
+DAY-1 (Introductions to basics)
+
+HTML - Hypertext mark up language    [founded by-Tim bernes lee- dev by w3c]
+      extention of HTML are .html & .htm
+  -->HTML document is a plain-text documents surrounded by elements
+    -Elements are surrounded by openning and closing tags (<>)
+
+    --> Anatomy of an HTML element
+      HTML tags can be extended by using property known as attributes
+    <p class="nice">Hello world</p>
+---------------------------------------
+Mark-up languages
+----------------------------------------
+-design
+-html
+-tag based
+ <tagname>
+- browser
+
+Types of tag
+1)Opening tag
+2) Closing tag 
+
+Types of selectors:- (attributes)
+1) tagname selector
+
+2) id selector - to style uniquely.
+               - represnted by # symbol.
+
+3) class selector - to style
+
+---------------------------------------------
+CONNECTING OF HTML WITH CSS (using link)@header
+<link rel="stylesheet" href="styles.css" />
+---------------------------------------------
+
+Html - basic
+
+<html>
+<head>
+</head>
+<body>
+</body>  - content
+</html>
+
+HTML HEADER - which consist of data which actually not displayed in web-content-side
+- it has place to put web title, fav-icons, keywords, links to style Sheets and meta-data
+
+Code editors -
+VSC CODE
+SUBLIME TEXT EDITOR
+
+
+HTML5
+
+<img src=” ” alt=” “ height=” “ width=” “ />
+<a href=” “ target=”_blank”>TEXT</a>
+
+Substitution tag-sub   Raising tag-sup
+<h1>2H<sub>2</sub>(g) + O<sub>2</sub>(g) -> 2H<sub>2</sub> O(g)</h1>
+        <h1>ax<sup>2</sup> +bx + c = 0</h1>
+
+
+Video tag
+<Video controls width=” ” height=”“>
+<source  src=” ” type=”video/mp4”/>
+</Video>
+
+Audio tag
+<Audio controls><source  src=” ” type=”audio/mp3”/>
+ </Audio>
+Figure where we can also keep figureCaption
+
+<figure>
+   <img src=”” alt=””/>
+  <figurecaption>Tourist destination</figurecaption>
+</figure>
+
+Inside the iframe the Embedding of video’s and map’s are done
+
+<br> ---Break of line is done by using 
+<hr> ---used to give linning
+<em> --used to emphasize the text
+<span> --- used to span differnt words in a row
+<strong> --highlight text 
+
+
+List types :-
+
+1)Ordered list
+   <ol>
+  <li></li>
+</ol>
+
+2)Unordered list
+
+ <ul>
+ <li></li>
+</ul>
+
+   -types of them are:- square, disk & circle
+
+   Table
+   -->Used for representation of data in a tabular format which is understandable manner
+   ------
+   <table>
+   <thead>
+    <tr> -------rows
+      <th> -----heading
+    </tr>
+   </head>
+   <tbody>
+     <tr>
+       <td></td> ----content
+     </tr>
+   </tbody>
+   </table>
+
+   Form
+   ----------
+
+   - <form>[[[]]][[]     label - type of input to be enetered
+     input - recieves users inputs
+
+     label & inputs arte joined by using the for and it tag
+
+     different values to type attributes
+     1) text 
+     2) password 
+     3) email 
+     4) date
+     5) radio [check-box]
+       - name attri. is used to join everything
+     6) file
+     7) number
+     8) textarea- where this label used to store large data in input
+       -rows & column attributes used to incr size of textarea
+     9) select tag-  drop-down--menudown
+     10) input checkbox
+
+     types values for buttons
+     1) button
+     2) submit
+
+     Assignment-2
+     login page of github & facebook
+
+     fontawesome cdn
+
+     ---------------------------------------
+
+     CSS - Cascading Style Sheets
+       --> Styles in HTML can be used by using CSS (it can be used to alter the fonts, text size, border, drop shadows and help to layout pages with multiple colums)
+    JAVASCRIPT -it is used to add dynamic functionality to web-pages-(example to find dynamic loactions, UI effects of appera/dis-appears)
+       CSS used to alter the font,color,size and spacing of your contents
+
+     -why external css is better
+
+     -------------------------------------
+     ## TYPES OF CSS STYLE-SHEETS
+
+     - provides styles to an html contents.
+     - differnt ways of providing styles to html are:-
+      1) inline CSS STYLE-SHEET
+           syntax
+           --------
+           - place style attribute in the openning tag
+             style="property:value"
+      2) internal CSS STYLE-SHEET
+            syntax
+            --------
+            <style>
+             selector{
+              property:value;
+             }
+            </style>
+      3) external CSS STYLE-SHEET
+
+      - create a file with extention as .css 
+      - link css file and html file - link tag.
+      - selector{
+        property: value;
+      }
+
+      ==>> External CSS APPLIING IS BEETER OPTION
+        as it increas the chance sof file re-usability
+
+        -better approach - External css - re-usability
+                                        - increase re-usabilty and reduces complexity
+                                        - reduce loading time
+                                        - easy to maintain and update
+
+      Priority-order :-
+               inline > internal > external css file
+----------------------------
+CSS FLEXBOX :-
+-flexbox is a layout mode that allow you to rapidly design the content layout
+ 
+ Basic Syntax :-
+  #item {
+    display: flex;
+    justify-content: x;
+    align-items: y;
+    flex-direction: z;
+    order: 1;
+    align-self: p;
+    flex-wrap: q;
+  }
+
+justify-content will align the content horizontally
+
+x can be :-
+flex-start
+flex-end 
+center 
+space-between 
+space-around 
+
+align-items will align horizontally
+
+y can be :-
+flex-start
+flex-end 
+center
+baseline
+stretch 
+
+flex-direction will arrange in direction
+
+z can be :-
+row 
+row-reverse 
+column 
+column-reverse
+
+p can be :-
+align-self will align items accross cross-axis
+can be --->
+flex-start
+flex-end 
+center 
+baseline 
+strech 
+auto 
+
+q can be :-
+-flex-wrap will wrap the items 
+q can be 
+ nowrap
+ wrap 
+ wrap-reverse
+
+order :- apply the order property to individual items
+ integer value (-2, -1, 0, 1, 2).
+
+----------------------------
+CSS GRID-SYSTEM:- 
+#garden{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#item{
+  grid-column-start;
+  grid-colum-end;
+  grid-row-start;
+  grid-row-end;
+  grid-colum: span x;
+  grid-row: span y;
+}
+
+span property helps to extend the property to other items also
+----------------------------
+
+SELECTORS :- 
+
+----------------------------
+- used to select the tag to be styled==attributes
+
+types of selectors
+1) tagname selector
+2) id selector - to style uniquely
+               - represnted by # symbol.
+3) class selector - to style in groups
+                  - represented by . symbol
+4) universal selector - style applied to entire document
+                       - represented by *
+
+------------------------------
+
+pseudo class
+pseudo elements
+--------------------
+css box-model
+--------------------
+-Its a box that wrap around every html element
+-It consists of padding, border and margin.
+
+border - it is the line around the contents
+       - by default border is not visible
+margin - space between border and next element
+padding - space between border and content 
+  -- border: width style color;
+  1) solid
+  2) dotted
+  3) dashed
+  4) double
+  5) groove
+  6) ridge
+  7) inset
+  8) outset
+
+  -padding 4 segment value representation:-
+
+  top -> botttom -> left -> right
+
+  -------------------------------
+
+  css variables used to add srtyles to html elements
+
+  two types:-
+  global variableslocal variables
+
+  var function :- used to inser the value
+
+  inorder to make -global variables it should be placed inside the root selector
+
+  variables are defined by double hyphen varible name
+     
+  local variables canm only be applied inside the curly braces
+
+-------------------------------------------------------
+
+BOOTSTRAP
+
+-bootsrap is a framework of html, javascript and css 
+-to create resposnive mobile first applications, which is used for creating web applications
+-provides pre-styled components
+-it has pre-defined class to style web pages.
+-used to create responsive web pages
+
+BOOTSTRAP GRID-system
+-->making web frames responsive by using the bootstrap grid system
+
+  extra small - xs
+  small - sm
+  medium - md 
+  large - lg 
+  extra large - xl
+
+  by the basic concept of grid there are 12 colums exist in a row
+
+  <div class="row w-100">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">card...</div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">card...</div>
+  </div>
+
+
+------------------------------------------------------------
+
+PSEUDO-CLASSES :-
+--------------
+hover, link, visited, focus, active,
+selector: pseudoclass{
+  property:value;
+}
+
+pseudo element
+----------------
+-allow to style certain part of an element
+-denoted by (::)
+-used for creating virtual contents that does not exist in the html documents
+
+eg:- ::after, ::before , ::marked , ::selected , ::first-line , ::first-letter
+
+Bootstrap grid system
+---------------------
+1) row 
+   -when a row is created the browser will create 12 basic column created by the browser
+   -row is created by the class row 
+
+
+
+   --------------------------------------------------------------------------------------
+ 
+   STYLING ATTRIBUES IN CSS :- 
+
+
+  # styling a para in css
+
+      p {
+        attribute : attribute value;
+      }
+
+  # styling a line with specific class format
+
+      li.classname {
+        attri....
+      }
+    such that that propert can only applied to li only
+
+# styling of line and span with the same class
+   
+   li.classname, span.classname {
+    attribute.....
+   }
+
+# for styling of specific element
+   
+   li em {
+    attribute...
+   }
+
+# styling of para & heading on same line
+   
+   h1 + p {
+    attribute...
+   }
+
+# styling things based on states
+
+  a:link {
+    attribute..
+  }
+
+  a:visited{
+    attribute
+  }
+
+  a:hover {
+  text-decoration: none;
+  }  
+
+# combining selectors and combinators
+  --> selecting span inside para which is inside article
+
+     article p span {
+      attribute..
+     }
+
+  --> selecting of para inside unorderedlist which is inside the h1
+
+     h1 + ul + p {
+       attri..
+     }
+
+---------------------------------------------------------------------------------------
+FUNCTIONS IN CSS :-
+
+# calc() function
+  eg :- ex attribute
+        -- width: calc(90% - 30px);
+
+# Transforms function
+  eg :- ex attribute
+      -- transforms: rotate(0.8 turns)
+
+---------------------------------------------------------------------------------------
+MEDIA-QUERY FOR DIFFERENT SCREENS 
+  
+
+  Syntax :-
+   @media (min-width: value){
+    attribute....
+   }
+
+   --> appliying media-query where when width greater than 30em of viewport then such attributes need to be followed
+
+    ex:-  
+      body{
+        background-color: red;
+      }
+
+      @media (min-width: 30em) {
+        body{
+          background-color: blue; 
+        }
+      }
+
+  # making one-element equivalent to many @backroung-xxx
+
+    -->in one line <--
+
+    background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+
+    -->equivalent to five lines <--
+
+    background-color: red;
+    background-image: url(bg-graphic.png);
+    background-repeat: repeat-x;
+    background-position: 10px 10px;
+    background-attachment: fixed;
+
+
+  --------------------------------------------------------------------
+  Q. How does CSS actually works?
+
+  HTML will load --> parse HTML which interm load CSS --> WHICH PARSE CSS 
+  both parsed CSS & parsed HTML loaded into the virtual DOM & displayed
+
+  --------------------------------------------------------------------
+
+ JAVASCRIPT
+->JAVASCIPT is a programming language taht helps to implement complex functionalities
+it is a scrpting language used to implemet functionalities
+
+----------------------------------------------------------------------------------
+
+GIT AND github
+--------------------
+
+Its a cloud based service that allow developers to  store and manage their code.
+
+features:-
+ -store code
+ -manage code
+ -share code
+ -can deploy code. - minor features
+ -version control
+ -git is the tool to do operations in github from    system
+  -storage 
+
+  git-storage - local repository
+  github storage - remote repository
+
+  operations in git :-
+   1) push - to add data
+   2) clone
+   3) pull - to get data
+
+   first a ne dev should clone the repo (i.e., pull)
+   ten each day need to pull to see new changes in local machine and should push to make his changes
+
+   operations in git
+   ------------------
+   1)push - to add data - local data - remote repo - uploading
+   2) clone - retrieving data - remote repo
+   3) pull - retrieving data - remote repo - downloading only the updated code
+
+  basic commands ::- 
+    - git init - to initialize git repo
+    - git status - to check status of file
+    - git add filename (to add a particular file)
+     -git commit -am "message" - to save file to local repository
+
+     -----------------------------------------------------------------
+     -----------------------------------------------------------------
+
+     javascript
+     -----------------
+     features
+      -javascript can be used in both as frontend and backend.
+      -frontend - behaviour 
+      -backend - logical operations
+      -javascript - browser understanding language 
+      - single thread programming language  - line by line exrcution 
+
+      - node.js - environment to run javascript outside the browser 
+      - files should be created with extention as .js 
+      - to run a js file - node filename 
+     
+     
+     
+     
+     
+     
+     Datatype:- Type of data a variable can hold
+
+     types--
+
+     primitive Datatype - basic Datatype that a language support
+     non primitive Datatype - combination of primitive data type
+
+     primitive
+     ------------
+     1) text - string - representation - 'content';
+     2) number -  int
+     3) boolean - true or false 
+     4) BigInt - eg:- 2^52 - large numbers 
+     5) undefined - variable is defined but no value assigned 
+     6) null - variable is defined but no value assigned 
+     7) symbol - unique identifier - eg:- 'a' - 'b' - ' 
+
+     non primitive 
+     -----------------
+     - used to store data 
+
+     identifiers - rules to create variables
+     ---------------------------------------
+     - can start with letter , dollar symbols, underscore 
+     - digit can be sequent charecter 
+         - underscore can be used tom sepertate the two words 
+         - camelCase can be followed 
+    - variable names are  case sensitive 
+
+      car , Car , cAr , CAR 
+
+      Syntax 
+      ---------------- 
+      var variableName = value;
+      keyword variableName = value 
+      (keywors are reserved words which gives a special meanings to a variable) 
+
+      1) const - reassignning is not posssible, np hoisting global scope
+      2) var - reassigning possible , hoisting global scope
+      3) let - reassignning possible, no hoisting , block level scope 
+
+      Hoisting 
+      ------------
+      defining a variable before it is declared. (using a variable before it created)
+      ---------------------------------------------
+
+      concatenation
+      ---------------
+
+     string + string = string 
+     string + number = string 
+     number + number = number 
+
+     operators 
+     ----------------
+     1) Assignment operators - (=)
+     2) Arithematic operators -
+        addition (+)
+        subtraction (-)
+        multiplication (*)
+        division (/)
+        modulus (%) - gives remainder 
+        exponential(**)
+
+        // template literally -literate 
+
+        // `content ${x}`
+      3) Relational operator 
+       -returns boolean value 
+       operators are >, >=, <= , == , ===
+
+       note :- 
+       note single = Assignment
+       where as == comparison 
+       === strict comparison 
+      4) operators
+       conditional operators - ?, ! , =
+       AND OR NOT Operators 
+
+       AND
+            
+       T || T = T 
+       T || F = T 
+       F || T = T 
+       F || F = F
+
+
+       NOT
+
+       !T = F 
+       !F = T 
+
+       5) increment(++)/decrement(--) operators 
+       6) short hand operator 
+          x = x + y 
+          x += y 
+       7) ternary operator 
+
+       conditional statements/ decision making statements 
+       - to execute certain statements only after  satisfy certain conditions 
+
+       Syntax
+       ------- 
+        if(condition){
+          statements
+        }
+        else{
+          statements
+        }
+
+        syntax 
+        --------
+        if(condition){
+          statements
+        }else if (){
+
+        }else{
+          statements
+        }
+        looping statements
+        -------------------
+        -to do task repeatedly at a particular position of a # #  programming  ::-- 
+        - 1) while 
+           syntax
+           -------- 
+           variable initialization 
+           while(condition){
+            statements
+            exit condition (incr/decr)
+           }
+
+           - 2) for
+
+           syntax
+           ---------
+           variable initialization
+            
+            for(var initi, condition, inc/dec){
+              statements
+            }
+
+  ------------------------------------------------------------------------
+
+  pattern printing (javascript implementation)
+
+  -------------------------------------------------------------------------
+
+  Functional--
+  ---------
+
+   - function are used to do task repeatedly at different position
+  
+
+  parts of functions --->
+  -------------------
+
+     1) Function definition
+          - statements
+             - Syntax 
+               ---------------
+                 function name () {
+                  statements
+                 }
+     2) Function Call 
+        - used to execute the statements
+        - syntax
+        --------------- 
+        name()
+
+        -variable inside a function is having a block scope
+        -to access variables outside a function we need to return variables
+        -no statements after the return statements wil be executed 
+        -fuction are hoistable
+        -function can be passed as an argument to another function
+
+        Function hoisting 
+        -------------------
+        - call a function before the function is defined 
+        - normal function have function hoisting 
+
+
+        synchronous functions - no time delay
+        asynchronous function - with time delay
+        eG:- api call
+        setTimeOut()
+
+        --------------------
+        DATASTRUCTURE
+        ---------------
+
+        -ITS A SPECIALIZED FORMAT OF ORGANIZING, PROCESSING, RETRIVING AND STORE DATA.
+        EG:- Array, Stack, quene, list , linked list tree, graph, etc 
+
+        Array---
+        -------
+        -unlike variables array can hold more than one value.
+        - Definition : its a single variable that can store more than one data of different datatype that are seperated by comma and enclosed within square bracket.
+
+        Syntax
+        ---------
+        var name = [value1, value2, value3,.....]
+        - length - number of items in any array.(locations)-start1
+
+        - key:value - index - 0 0:item1 ... n-1: item n
+         
+        array operations 
+        --------------------
+        1) push(item) - to add an item as the last item to an array 
+        2) unshift(item) - to add an items as item as an array 
+
+        3) pop() - to remove the last item of a given array
+
+        4) shift() - used to remove the first item of a given array 
+
+        different way to access item from an array 
+
+        different way of access item from an array
+        -------------------------------------------
+
+        // w.a.p to print all items in an array 
+        fruit= ['Apple','Orrange','Kiwi','Pine-Apple']
+
+        for (i=0;i<=fruit.length-1;i++){
+          console.log(fruit[i])
+        }
+
+
+       ARRAY operations---
+       ------------------
+       1) push(item) - to add the item as the last item to an array
+       2) unshift(item) - to add an item as the first item of an array
+       3) pop() - to remove the last item of a given array 
+       4) shift() - to remove the first item of a given array 
+       5) sort() - to arrange in ascending or descending order 
+       6) flat() - it changes the dimentions of an array
+       7) forEach() -used access each elements of an array 
+       different way to access item in an array
+       8) map() - to access each item from an array and return a new array 
+       9) filter() - to access each item from an array and return a new array
+       10) find() - to access each item from an array and return a new array
+       11) some() - it returns boolean value based on condition 
+       12) reduce() - return a single value from the given array
+       13) includes() - returns boolean values based the items in the given array 
+       14) array.length() - return boolean values based on items in the given array 
+       15) splice(start_index, count, add_item, ... add_itemn) - add and remove items as specified point 
+       16) indexOf() - returns the index of the first occurrence of the specified value
+       17) lastIndexOf() - returns the index of the last occurrence of the specified value
+       18) slice(start index, end_index) - to return a selected number of element from the given array 
+
+       ------------------------------------------
+       - for loop -index
+       - in - indexes of an array
+        Syntax 
+        for(variableNumber in array)
+
+        -of - returns directlyt item of an array
+
+        ---------------------------------------------------------
+
+        Nested array - array inside another array 
+
+        // String methods  - a group of similar charecter
+
+        1) toLowerCase()- to convert string to small letters 
+
+        2) toUpperCase() - to convert string to upper case 
+
+        3) startSwitch() - it checks a string starts with a particular char 
+                            it is case sensitive
+        4) endWith() - it check wheather a string end with a particular string 
+                    - return boolean value 
+
+        5) slice() - to slice the index
+        6) trim() - to remove extra space at the ends of a string
+        7) split(separator) - it splits the strings based on the sepperators - return an array
+        8) replace() - to replace/exchange a particular word/charecter from a given string 
+        9) replaceAll()- replace all matching word 
+        10) array.from() - convert the string into an array
+
+
+OBJECTS :- 
+
+- SINGLE VARIABLE WHICH CAN STORE MORE THAN ONE DATA 
+- KEY VALUE PAIR
+- KEY IS UNIQUE AND VALUE IS NOT UNIQUE
+- KEY IS STRING AND VALUE IS ANY DATA TYPE
+- Key value pairs are enclosed within curly braces 
+- It can provide  more clarity to the stored data as compared to an array
+
+display object
+ - console.log(object name) 
+
+to access each element of object 
+------------------------------
+if key is a variable 
+    - objectName[key]
+
+    else 
+      - objectName["key"]
+      - objectName.key 
+
+  add an item to an object 
+  ---------------------------
+  objectName["key"] = value
+
+  add item to an object 
+  --------------------------
+  objectName["key"] = value
+
+  UPDATING 
+  --------------
+  objectName["key"] = value
+
+  delete
+  -------------
+
+  delete objectName.key - return boolean value 
+
+
+
+
+
+
+
+
+  ----------------------------------------------
+  ----------------------------------------------
+
+  Procedural programming 
+  -----------------------
+  - A programming paradigm that focuses on procedures or steps to be executed to achieve a specific goal.
+  - unlike oops, where data and methods are tied together (encapsulated) in an classs or object, procedural  programming
+  which uses data and methods as different entity 
+
+
+  // Object oriented programming 
+  ---------------------------------------
+  - Single variable which can store more than one data of different datatype that are stored as key value pair which can be enclsed in curly braces 
+  - it can provide more clarity to data than other data type
+
+
+  Basics 
+  --------
+  1) class - Blue print which contain common features from which contain different objects can be created 
+  2) object - It is the real time entity created from class
+  3) reference -  memory location where properties and methods are stored.
+  
+    property - variable inside a class 
+    methods - functions inside a class 
+
+    - class contains 
+     1) property
+     2) methods
+
+
+      3) constructors 
+     - its not madidatory that all this three components always inside the class always
+
+        
+   - syntax to create a class 
+     class class_name{
+      //property 
+      //constructors
+      //methods 
+     }
+
+     //Syntax to create a class 
+      class class_name{
+        //property 
+        //contructor 
+        //methods 
+      }
+
+      instance variable 
+      - inorder to access properties within the class 
+      - we use this keyword
+
+      //methods 
+       syntax 
+       -------
+       methodname(){
+
+       }
+
+       constructor 
+       ------------
+       syntax
+       ------------
+        methodname(){}
+
+       syntax 
+      ----------
+       constructor(){}
+
+       instance variable :- this.varaiblename 
+       - inorder to access variable within the class 
+       - we use this keyword
+
+
+       object 
+       --------
+       syntax 
+       ----------
+       const objname = new classname()
+
+
+   PILLERS OF OOPS 
+   ---------------------
+   1) Inheriatance
+   2) polymorphiusm
+   3) encapsulation 
+   4) abstrtaction 
+
+   Inheritance 
+   -------------
+    -It is used to access methods and properties from one class to another
+    - parent class / super class / base class 
+    - child class / sub class / derived class 
+
+    - key word - extends - CLASSICAL INHERITANCE 
+
+    - object inheritance - __proto__
+
+    - MULTI-LEVEL-INHERITANCE 
+
+    polymorphiusm
+    ----------------
+    poly - many 
+    morph - forms 
+
+    1) method overloading 
+       - methods with same name but differnt arguments
+       - executes based on the arguments .
+       - javascript doesnot support method overloading
+    2) method overriding 
+
+      - method with same name and same of arguments 
+      - execute the last written method 
+
+
+      Exception Handling 
+      -------------------
+      Exception - run time errors 
+
+      try{
+         statement - which might have errors
+      }
+      catch{
+        statement to resolve errors / to view the errors 
+      }
+      finally{
+        statement to execute always
+      }
+
+      Browser Engine - html css javascript
+       
+       - javascript - directly - DOM 
+
+       - javascript to provide behavior to application 
+
+
+      javascript in FRONTEND
+      -----------------------
+
+      Document Object Model (DOM)
+      -----------------------------
+      - tree structure of HTML document created by browser 
+
+      referance 
+      ----------
+
+      Different ways to link js code
+      -------------------------------- 
+      - external js 
+        - create a sepertate file with extention as filename.js 
+        - script tag is used to connect the external file with the html 
+        - src - path js file 
+          advantage 
+             - reduces complexity and loading time 
+             - reuse 
+
+     - internal js 
+     - script - logic  
+       -head and after body - prefer - after body -            
+       
+      What are diff. b/w html tag and element 
+      What are different selectors in html
+      How to accesss tag in html 
+      Give some examples of semantics tags - header, footer , body 
+      What is the use of id and class in html
+
+
+      how to access tag 
+      -----------------
+      -1) document.getElementByTagname('tagname') - 
+       return an array(htmlcollection) -all specified tags 
+
+      -2) document.getElementById() - return directly the Tag
+
+      -3) document.getElementByClassname() - return htmlcollection
+       which contain tag with same classname
+
+      -4) document.querySelector()
+         - #- id 
+         - . - class 
+         - return directly  the first tag 
+
+      -5) document.querySelectorAll()
+       - it return nodelist(array) with all tags 
+
+      to access the content from the element
+      ---------------------------------------
+      .innerHTML 
+
+
+      Events 
+      -------
+      - It is the actions performed by the user which leads to an update in DOM structure 
+      - It is the trigger for the function to be executed
+      eg :- Click , change , keyload , submit , load 
+
+
+
+
+        
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    React.js developer 
+    --------------------
+    - React is a JavaScript library for building user interfaces.
+    - It is used to build single-page applications, using a components based architecture to create re-usable components and helps to manage states efficiently.
+
+   #  why React.js ?
+     -component based architecture, Virtual DOM (IMPROVES PERFORMANCE)
+     -JSX (JavaScript XML) (IMPROVES PERFORMANCE)
+     -Rich eco-systems, libraries and tools -allow easy debugging
+
+   # How does React code work in the background ? 
+   -React code works in background by using virtual DOM for efficiently update the actual DOM
+   -IT using a diffing algorithm to reconcile the changes .
+   -It uses  component based architecture to manage states and render UI dynamically.
+   -It uses JSX to write HTML in React code.
+   -Virtual DOM  is a light-weight, in memory representation of the Actual DOM. React uses 
+   it to efficiently updates the real DOM -(Document Object Model)
+
+   # Why React is not just JAVASCIPT ? 
+     -JavaScript alone can become more complex and in-efficient to build modern websites   and UIs.
+     -framework like react simplify the development with component based architecture,
+     virtual DOM for performance and making code more efficient and scalable.
+
+  # JSX and how it different from HTML 
+
+  -JSX is a syntax extention for javascript (that allow HTML code within javascript)
+
+
+  ==> Types of components in React.js
+       1. Functional Components : These are stateless and written as functions.
+         they use hooks for state manage and side effects
+
+             syntax :- 
+              function MyComponent(props) {
+                return <h1>Hello, {props.name}</h1>;
+              }
+      2. Class components 
+         this are stateful and written as ES6 classes. They are extended by using ES6 classes.
+
+            syntax :-
+            class MyComponent extends React.Component {
+              render() {
+                return <h1>Hello, {this.props.name}</h1>;
+            }
+            }
+
+  ==> Props and Prop-Types in react 
+
+     -Props are input to React components, passsed from parent to child, allowing data and functions to be shared. 
+     -Prop-type is a library for type-checking props, ensuring the correct data types are recived.
+
+  ==> States in React 
+    
+    -States in React are build-in objects used to manage component data over time.
+    -It allow component to create and maintain their own dynamic data can be upadted   using  `set-state`
+
+  ==> React Event handlers 
+   -In React event handlers used to handle the events attached to JSX Components
+   -EVENT HANDLERS UPDATES THE STATES OF THE components that can be used to update the 
+    states of the components - which trigger and render parts
+
+  ==> Toogle mode in React
+
+    Toogle-mode helps to manage the states with a boolean flag
+
+  ==> React Router 
+   -React router helps in the navigation of single-page applications.
+   -helps in tghe rendering of the components based on URL 
+
+  ==> sync or async 
+
+   -It is used in handling asynchronous operations
+
+  ==> ComponentDidMount in REACT 
+
+   -`ComponentDidMount` is a lifecycle method in react that runs once after a 
+    component is mounted, ideal with data fetching
+
+  ==> React life-cycle method 
+
+   -React lifecycle method manages the component stages :- 
+      which consist of proccess of mounting, updating and un-mounting
+
+  ==> React hooks
+
+   -React hooks are functions that let you use state and other react features in functional  components in react lifecycle
+   -key hooks include
+       useState - for state management 
+       useEffect - for side effects
+       useContext - for context management 
+       useReducer - for state management
+       useMemo - memorize expensive calculations 
+       useCallback - memorize expensive functions
+
+ ==> How to converting class based to functional based components ? 
+    
+    -Involves replacing lifecycle methods with hooks, primarily useEffect for managing side effects. 
+
+
+
+
+    Node.js 
+    ---------
+    -Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+    -it will enable server-side scripting, scalable and event-driven applications.
+
+    Express.js 
+    ----------
+    -Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features and middleware support. 
+

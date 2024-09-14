@@ -1,0 +1,57 @@
+## PYTHON :- (PHYTHON 3)
+
+-Object oriented praogramming lamguage
+   --Allows to create and use objects and classes easily.
+   -- ex:- A variable with whole number is an object of int class.
+- Compatibility with different platforms like windows, Mac, Linux, Raspberry Pi, etc
+- Simple syntax 
+- Interpreter based language
+-Robust standard libraries 
+  -Allows to add functionality to the program without writing additional codes
+-Integration with third party module is easy
+  ex:- Pyspark (Integration with spartk)
+-Open source and huge community support  
+
+## Some of important datatypes in Python are :-
+  - Numbers
+  - Strings
+  - Lists
+  - Tuples
+  - Set
+  - Dictionary
+
+# python code which detect which data type it is :- 
+
+   #Integer data type 
+   a = 976 
+   type(a) //returns the data-type
+   // The datatype stores any numeric values
+
+   #string data type
+    //Comprises of set of uni-code charecters which can include a single charecter or multi-charecter
+
+    #List data-type
+      The items can be numbers strings
+      It contains an ordered sequence of item (sepertated by comma)
+
+    #Tuples 
+      -Just like a list, a tuple contains an ordred sequence of items, the only difference is that it cannot be modified
+      -it is used to protect the data and usually is fast
+      - tuple is defined by parenthesis ()
+      - Items in the tuples are right protected
+
+    #Set
+     -It is an un-ordered collections of unique items
+     -It is composed using curly braces {} and items are seperated by commas
+     -The items cannot be fetched using their index numbers
+
+     #Dictionary 
+      -It is an un-ordered collection, containning pair of key nd value
+      -The key must be unique and can be of di-fferent data type 
+
+
+      ## Some arith operation
+         square roots :- 2**8
+
+
+      

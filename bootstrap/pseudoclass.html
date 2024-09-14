@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pseudo class</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            a{
+                font-size: 30px;
+            }
+            a:link{
+                color: green;
+            }
+            a: visited{
+                color: red;
+            }
+            a: hover{
+                color: blue;
+            }
+            a:active{
+                color: yellow;
+            }
+            input: focus{
+                background-color: yellow;
+            }
+            h1 :: before{
+                content: '----------------------------';
+                color: blue;
+            }
+            h1 :: after{
+                content: '----------------------------';
+                color: green;
+            }
+            p::first-letter{
+                color: red;
+                font-size: 20px;
+            }
+            p::first-line{
+                color: blueviolet;
+            }
+            p::selection{
+                backgrounf-color: yellow;
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Pseudo Element</h1>
+       
+        <a href="https://www.linkedin.com/in/dilhaque-ahemmed-cp-1a71ba228/" target="_blank">My LinkdIn</a>
+        <script src="" async defer></script>
+        <input type="text">
+        <p>hi heloo how are you doing at the home hi heloo how are you doing at the home hi heloo how are you doing at the home hi heloo how are you doing at the home hi heloo how are you doing at the home hi heloo how are you doing at the home</p>
+    </body>
+</html>
