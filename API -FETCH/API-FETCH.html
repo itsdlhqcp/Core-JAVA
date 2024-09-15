@@ -20,7 +20,7 @@
                   <diV class="col-md-4 p-5">
                     <div class="shadow p-3 text-center rounded-bg bg-white">
                         <h1 class="mt-3 text-primary">Lucky winning Context</h1>
-                        <p>Result</p>
+                        <p id="result">Result</p>
                     </div>
                 </div>
                 <div class="col-md-4"></div>
@@ -28,4 +28,28 @@
         </div>
         <script src="" async defer></script>
     </body>
+    <script>
+        //promise 
+        //objects 
+        const luckywin = new Promise((res, rej)=>{
+            myLottery = 3 
+
+            lottery = Math.floor(Math.random()*8)
+
+            if(lottery == myLottery){
+                res("You won 😎")
+            }else{
+                rej("Better Luck next time 🔯")
+            }
+        })
+
+        luckywin.then((response)=>{
+            result.innerHTML=response
+            result.style.color='green'
+        }).catch((response)=>{
+            result.innerHTML=response
+            result.style.color='red'
+        })
+
+    </script>
 </html>
