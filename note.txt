@@ -1141,6 +1141,88 @@ if key is a variable
       JSON.strigfy() - const into string  
 
 
+      API 
+      -----
+      - Application Programming Interface 
+      - To communicate between Softwares/Application available in Internet 
+
+      - Scope API are Classsified into 
+          1) public api 
+          2) private api 
+          3) partner api 
+          4) composite api 
+
+          http :- HYPERTEXT TRANSFER PROTIL 
+          ---------
+          https, FTP, UDP, SMTP , etc ....
+
+          http 
+          ---methods---
+          1) post - to sent the data 
+          2) get - to get the data 
+          3) put - to update the data 
+          4) delete - to delete the data 
+
+          Request two parts 
+          -----------------
+          1) head - token, content-type 
+          2) body - data/ contents 
+
+          json formate
+          -----------------
+          json - JavaScript Object Notation 
+          - common format of sharing data between applications 
+
+          SYNTAX 
+          -------
+
+          {
+            "key":value 
+          }
+
+          response status 
+          -----------------
+          1) 1xx series - information 
+          2) 2xx series - sucess response 
+          3) 3xx series - redirection 
+          4) 4xx series - client error 
+          5) 5xx series - server error
+
+          url 
+          ----- 
+          Uniform resource locator 
+
+          RESTFUL API - Architecture 
+
+          SOAP 
+
+          API Testing TOOL 
+          ----------------- 
+          - thunder client - vs code 
+          - postman - chrome extension 
+
+          - Asynchronous 
+
+          1) AJAX - Asynchronous JavaScript XML
+            - XMLHttpRequest CLASS 
+            - open() - connect with the application 
+            - send() - to send the request 
+
+          2) Fetch - promise class 
+           - promise - ASYNCHRONOUS function 
+           - three state 
+              1) resolve/fullfill 
+              2) pending
+              3) reject/rejected -catch()
+
+
+
+
+
+
+   
+
+
 
 
         
