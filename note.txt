@@ -1109,7 +1109,36 @@ if key is a variable
       -------
       - It is the actions performed by the user which leads to an update in DOM structure 
       - It is the trigger for the function to be executed
-      eg :- Click , change , keyload , submit , load 
+      eg :- Click , change , keyload , submit , load
+      
+
+
+
+
+
+
+      Database 
+      ----------
+      - to store data 
+
+      Broser Storage 
+      ---------------
+      - to store data in browser only
+      -Only limited amount of data can be stored 
+      -types of 
+         ---> 1) local storage  
+               -- permanent storage 
+         ---> 2) session storage 
+               -- temporary storage of limited data 
+
+      - operations in browser storage 
+      --------------------------------
+      1) add data - localStorage.setItem("key","data")
+      2) get data - localStorage.getItem("key")
+      3) delete data - localStorage.removeItem("key")
+
+
+      JSON.strigfy() - const into string  
 
 
 

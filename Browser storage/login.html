@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Login</title>
+        <title>Login Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--Bootstrap-->
@@ -15,28 +15,13 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-       <!--
-        <div class="container mt-5">
-            <diV class="row w-100 mt-5">
-                <div class="col-md-4 "></div>
-                <div class="col-md-4 ">
-                    <h4>Login Here</h4>
-                    <br>
-                    <input id="data" type="text" placeholder="Username" class="form-control">
-                    <br>
-                    <input id="Password" type="Password" placeholder="Password" class="form-control">
-                    <button class="btn btn_success ms-2"></button>
-                </div>        
-            <div>
-                <div></div>
-        </div>--> 
         <div class="container">
             <header style="width: 100%; height: 300px; background-image: url('https://www.techquintal.com/wp-content/uploads/2021/05/Information-Technology.jpg'); overflow-x: hidden;">
                 <nav class="navbar bg-transparent">
                     <div class="container-fluid">
                       <a class="navbar-brand text-light" href="#">
                         <i class="fa-solid fa-house fa-2x"></i>
-                       <span class="fa-2 ms-2 fw-bold">Landing Page</span>
+                       <span class="fa-2 ms-2 fw-bold">Login Page</span>
                       </a>
                     </div>
                   </nav>
@@ -62,22 +47,25 @@
                             <form class="shadow p-3 rounded" style="background-image: linear-gradient(to right, white , blue);">
                                  <h4 class="text-center text-primary">Login</h4>
                                  <div class="mb-3">
-                                    <input type="text" placeholder="Username" class="form-control">
+                                    <input id="loginUser" type="text" placeholder="Username" class="form-control">
                                  </div>
                                  <div class="mb-3">
-                                    <input type="password" placeholder="Password" class="form-control">
+                                    <input id="loginPswd" type="password" placeholder="Password" class="form-control">
                                  </div>
                                  <div class="mb-3 mt-4">
-                                    <button class="btn btn-primary w-100">Login</button>
-                                    <p class="text-primary" style="font-size: 12px;">Are you a New User ? Register</p>
+                                    <button onClick="obj.login()" type="button" class="btn btn-primary w-100">Login</button>
+                                    <p class="text-primary" style="font-size: 12px;">Are you a New User ? <a href="./register.html"> Register</p>
                                  </div>
                             </form> 
                         </div>
+                        <br>
+                        <br>
                 </div>
                 <div class="col-md-1"></div>
             </div>
         </div>
-         <script src="" async defer></script>
+<!--<script src="" async defer></script>  -->
     </body>
+    <script src="./logic.js"></script>
 </html>
 
