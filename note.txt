@@ -42,7 +42,14 @@ Mark-up languages
  <tagname>
 - browser
 
-Types of tag
+QQ:-- Which are attributes in HTML :- 
+   1) href - Specifies the URL of a page that a link go to 
+   2) src - specifies a path that image go to 
+   3) alt - specifies an alternate text for an image 
+   4) lang - Declare the language of a web page 
+
+
+QQ:-- Types of tag
 1)Opening tag
 2) Closing tag 
 
@@ -53,6 +60,7 @@ Types of selectors:- (attributes)
                - represnted by # symbol.
 
 3) class selector - to style
+                  - REPRESENTED BY .
 
 ---------------------------------------------
 CONNECTING OF HTML WITH CSS (using link)@header
@@ -79,7 +87,7 @@ SUBLIME TEXT EDITOR
 HTML5
 
 <img src=” ” alt=” “ height=” “ width=” “ />
-<a href=” “ target=”_blank”>TEXT</a>
+<a href=” “ target=”_blank”>TEXT</a>   // _blank will open site in new tab 
 
 Substitution tag-sub   Raising tag-sup
 <h1>2H<sub>2</sub>(g) + O<sub>2</sub>(g) -> 2H<sub>2</sub> O(g)</h1>
@@ -96,7 +104,7 @@ Audio tag
  </Audio>
 Figure where we can also keep figureCaption
 
-<figure>
+<figure>                        // to place an image with caption fig tab is used
    <img src=”” alt=””/>
   <figurecaption>Tourist destination</figurecaption>
 </figure>
@@ -114,14 +122,14 @@ List types :-
 
 1)Ordered list
    <ol>
-  <li></li>
-</ol>
+     <li></li>
+   </ol>
 
 2)Unordered list
 
- <ul>
- <li></li>
-</ul>
+   <ul>
+     <li></li>
+   </ul>
 
    -types of them are:- square, disk & circle
 
@@ -345,15 +353,16 @@ padding - space between border and content
   css variables used to add srtyles to html elements
 
   two types:-
-  global variableslocal variables
 
-  var function :- used to inser the value
+  global variables  -----   local variables
+
+  var function :- used to insert the value
 
   inorder to make -global variables it should be placed inside the root selector
 
   variables are defined by double hyphen varible name
      
-  local variables canm only be applied inside the curly braces
+  local variables can only be applied inside the curly braces
 
 -------------------------------------------------------
 
@@ -404,13 +413,9 @@ Bootstrap grid system
 1) row 
    -when a row is created the browser will create 12 basic column created by the browser
    -row is created by the class row 
-
-
-
    --------------------------------------------------------------------------------------
  
    STYLING ATTRIBUES IN CSS :- 
-
 
   # styling a para in css
 

@@ -13,16 +13,28 @@ for (let i = 0; i < power; ++i) {
 // Display output
 console.log(num);
 
+// let n = 2
+
+// power = 3;
+
+// let num = 1
+// for(let i = 0; i < power; ++i){
+//     num = num * n;
+// }
+
+// console.log(num)
+
 
 
 // -------------------------------------------
 
-power = 2
-i = 1
+// power = 2
+// i = 1
 
-while(i<=36){
-    if(8<=i**power && i**power<=36){
-        console.log(i);
-    }
-    i++;
-}
+// while(i<=36){
+//     if(8<=i**power && i**power<=36){
+//         console.log(i);
+//     }
+//     i++;
+// }
+

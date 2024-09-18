@@ -29,4 +29,7 @@ while(i<j){
 
 //sum of all numbers inside given array
 
-//print all odd numbers from given array
+//print all odd numbers from given array .
+
+
+

@@ -19,6 +19,7 @@ for(row=1;row<=4;row++){
 
 
 
+
 // write a program to print the pattern
 
 

@@ -33,96 +33,118 @@
 
 
 //write a program to check wheather two is present or not in an array (H/W
+// const array = ['1','2','3','4','5']
+// searchItem = 2
+// isPresent = false;
+
+// for(item of array){
+//     if(item == searchItem){
+//        isPresent = true;
+//        break
+//     }
+// }
+
+// console.log(isPresent?'present':'not present');
+
 const array = ['1','2','3','4','5']
 searchItem = 2
-isPresent = false;
+isPresent = false
 
 for(item of array){
     if(item == searchItem){
-       isPresent = true;
-       break
+        isPresent = true;
+        break;
     }
 }
+console.log(isPresent ? 'present':'Not present');
 
-console.log(isPresent?'present':'not present');
+// // input= [4.5.6]
+// // output= [11,10,9]
+// input=['4','5','6']
+// if(input[1]==4 && input[3]==6){
+//     for (i=4;i<=6;i++){
+//         console.log(i+7);
+//         i--;
+//     }
+// }
 
-// input= [4.5.6]
-// output= [11,10,9]
-input=['4','5','6']
-if(input[1]==4 && input[3]==6){
-    for (i=4;i<=6;i++){
-        console.log(i+7);
-        i--;
-    }
-}
+// input=['4','5','6']
+// if(input[0]==4 && input[2]==6){
+//     for(i=4;i<=6;i++){
+//         console.log(i+7);
+//         i--;
+//         continue
+//     }
+// }
 
-// w.a.p to print repeated item in an array
-a = [10,20,30,10,20,40,50]
+
+a = [10,20,30,10,20,40,50,50]
+isDuplicate = false
 output=[]
-isDuplicate=false
-
 for(i=0;i<=a.length-1;i++){
     for(j=i+1;j<=a.length-1;j++){
         if(a[i]==a[j]){
-              isDuplicate=true;
-              output.push(a[i]);
-              break;
+            isDuplicate = true;
+            output.push(a[i]);
+            break;
         }
     }
 }
 
-console.log(isDuplicate?output:'No dupli avilable');
+console.log(isDuplicate? output: 'No Dup Found');
 
-// w a p to print whose pair sum is 6
+// // w .a . p to print whose pair sum is 6 
 // b= [2,3,4,5]
 
+// for(i=0;i<=b.length-1;i++){
+//     for(j=i+1;j<=b.length-1;j++){
+//         if(b[i]+b[j]==6){
+//             check=true;
+//         }
+//     }
+//     if(check==false){
+//         console.log('no pairs');
+//     }
+// }
 
-a = [10,20,30,10,20,40,50]
+// b= [2,3,4,5] 
+// for(i=0;i<=b.length-1;i++){
+//     for(j=i+1;j<=b.length-1;j++){
+//         if(b[i]+b[j]==6){
+//             console.log(b[j],b[i]);
+//         }
+//     }
+// }
 
-output = []
-isDuplicate=false
-for(i=0;i<=a.length-1;i++){
-    for(j=i+1;j<=a.length-1;j++){
-        if(a[i]==a[j]){
-            isDuplicate=true
-            check=false
-            for(k=0;k<=a.length-1;k++){
-                if(a[i]==output[k]){
-                    check=true
-                    break
-                }
-            }
-            if(!check){
-                output.push(a[i])
-                break
-            }
-        }
-    }
-}
 
-console.log(isDuplicate?output:'not duplicate');
-
-// w .a . p to print whose pair sum is 6 
-b= [2,3,4,5]
-
+b= [2,3,5,5] 
+pairSum= false
+pairs =0
 for(i=0;i<=b.length-1;i++){
     for(j=i+1;j<=b.length-1;j++){
         if(b[i]+b[j]==6){
-            check=true;
+            pairSum=true
+            pairs++
+            console.log(`no.of pairs whose sum is 6 is ${pairs}`)
+            console.log(`respective pairs are ${b[i],b[j]}`)
         }
     }
-    if(check==false){
+    if(pairSum==false){
         console.log('no pairs');
+        break;
     }
 }
 
-// Truthy operator - &&
-// Syntax 
-// condition && statement 
-// w.a.p to print common numbers between two given array 
-// p=[10,11,12,20,30]
-// q=[11,20,25,30,33]
-// o/p = 11, 20, 30
+
+// // Truthy operator - &&
+// // Syntax 
+// // condition && statement 
+// // w.a.p to print common numbers between two given array 
+// // p=[10,11,12,20,30]
+// // q=[11,20,25,30,33]
+// // o/p = 11, 20, 30
+
+console.log("--------------------------------------------------------")
 
 p=[10,11,12,20,30]
 q=[11,20,25,30,33]
@@ -131,8 +153,8 @@ r=[]
 
 for(i=0;i<=p.length-1;i++){
     check=false
-    for(j=i+1;j<=q.length-1;j++){
-        if(p[i]==q[j] && p[i] && q[j]){
+    for(j=0;j<=q.length-1;j++){
+        if(p[i]==q[j] && p[i] && q[j]){     // if no element in both to rep null value 
             console.log(p[i]);
             check=true
         }
@@ -141,7 +163,25 @@ for(i=0;i<=p.length-1;i++){
         r.push(p[i]);
     }
 }
-// program it in another same way
+// // program it in another same way
 
-o=[]
-isPresent=false
+// o=[]
+// isPresent=false
+
+// console.log("-------------------------------------------------")
+// p=[10,11,12,20,30]
+// q=[11,20,25,30,33]
+
+// for(i=0;i<=p.length-1;i++){
+//     check=false
+//     for(j=i+1;j<=q.length-1;j++){
+//         if(p[i]==q[j] && p[i] && q[j]){
+//             console.log(p[i]);
+//             check=true
+//         }
+//     }
+//     if(check==false){
+//         console.log('no same')
+//         break;
+//     }
+// }
