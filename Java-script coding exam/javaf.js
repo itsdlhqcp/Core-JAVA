@@ -16,40 +16,17 @@ const books = [
     }
 ]
 
-// w. a .p to print all avilable books available 
+book1984.forEach((item)=>console.log(item.title)) 
 
-books.forEach((item)=>console.log(item.title))
-console.log('--------------------------')
+const bp = book.find((item) => item.publisher.location.toLowerCase() === 'newyork')
+console.log(bp) 
 
-// w. a .p to print details of book published in newyork
 
-// Print details of the book published in New York
-const bookPubNew = books.find((item) => item.publisher.location.toLowerCase() === "new york");
-console.log(bookPubNew)
+const b190 = books.filter(book => book.yearPublished  < 1900);
+console.log(b190)
 
-console.log('--------------------------')
+const tR = books.reduce((total, book) => total + book.price);
+console.log(tR) 
 
-// w .a .p to print the name of the book that published before 1900
-const before1900Books = books.filter(book => book.yearPublished < 1900);
-console.log(before1900Books)
-
-// w. a. p to print details of book pub in 1984
-console.log('--------------------------')
 const book1984 = books.filter(book => book.yearPublished = 1984)
 console.log(book1984)
-
-// what will be revenue generated when all books are sold out
-console.log('--------------------------')
-const totalRevenue = books.reduce((total, book) => total + book.price);
-console.log(`Total revenue generated when all books are sold: $${totalRevenue}`);
-
-
-
-
-
-
-
-
-
-
-
