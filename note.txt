@@ -532,7 +532,7 @@ MEDIA-QUERY FOR DIFFERENT SCREENS
   --------------------------------------------------------------------
 
  JAVASCRIPT
-->JAVASCIPT is a programming language taht helps to implement complex functionalities
+->JAVASCIPT is a programming language that helps to implement complex functionalities
 it is a scrpting language used to implemet functionalities
 
 ----------------------------------------------------------------------------------
