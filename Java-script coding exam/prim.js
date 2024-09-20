@@ -10,5 +10,5 @@ if (num ==1){
      break
     }
 }
-console.log(falg==1? 'prime':'not prime')
+console.log(flag==1? 'prime':'not prime')
 }

@@ -1,4 +1,4 @@
-for(row=1; row< num; i++){
+for(row=1; row< 6; row++){
     str=""
     for(col=1;col<=4; col ++){
         str = str + '# '

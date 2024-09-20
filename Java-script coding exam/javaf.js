@@ -16,9 +16,10 @@ const books = [
     }
 ]
 
-book1984.forEach((item)=>console.log(item.title)) 
+const x = books.forEach((item)=>console.log(item.title)) 
+console.log(x)
 
-const bp = book.find((item) => item.publisher.location.toLowerCase() === 'newyork')
+const bp = books.find((item) => item.publisher.location.toLowerCase() === 'newyork')
 console.log(bp) 
 
 

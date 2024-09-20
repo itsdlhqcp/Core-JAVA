@@ -37,6 +37,6 @@ myRestaurant.addFood("Vegetable curry","Indian","Veg","true")
 myRestaurant.addFood("Cheese Pizza","Italian","Veg",false)
 
 myRestaurant.displayMenu();
-myRestaurant.updateAvailability("Cheese",true);
+// myRestaurant.updateAvailability("Cheese",true);
 myRestaurant.deleteFood("Vegetalble Curry")
 myRestaurant.displayMenu();
