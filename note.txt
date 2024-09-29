@@ -1540,5 +1540,202 @@ Functional component to click a button
 
     Express.js 
     ----------
-    -Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features and middleware support. 
+    -Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features and middleware support.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CODING *****************************************************************************
+
+
+// program to print a pattern 
+
+// 5 4 3 2 1 
+// 5 4 3 2
+// 5 4 3 
+// 5 4
+// 5 
+
+
+// for (let i=0; i< 5; i++){
+//     for(let j=5 ; j> i; j--){
+//         console.log(j + ' ');
+//     }
+
+// }
+
+const arr = [5,4,3,2,1]
+
+for(let i= arr.length; i>0; i--){
+    console.log(arr.slice(0,i).join(' '))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('-------------------------------------------')
+
+function sortByKey(array, key){
+     return array.sort((a,b) =>{
+        if (a[key] < b[key]) {
+            return -1;
+        }
+        if (a[key] > b[key]) {
+            return 1;
+        }
+        return 0;
+     })
+}
+
+
+const data = [
+    {name: 'kiran' , age: 28 , mark: 63}, 
+    {name: 'max'  , age: 30 , mark: 300},
+    {name: 'anna' , age: 18 , mark: 500}
+]
+
+const sorIt = sortByKey(data, 'mark');
+console.log(sorIt)
+
+
+
+
+PRIME OR NOT  
+---------------------
+
+flag = 1
+num =2 
+if (num ==1){
+    console.log('neither prime nor compsite type number')
+}else{
+    for(i=2; i<num; i++){
+        if(num % i == 0){
+            flag = 0 
+
+     break
+    }
+}
+console.log(flag==1? 'prime':'not prime')
+}
+
+
+
+
+
+JAVA FETCH :- 
+-------------------------------
+
+
+const books = [
+    {
+        id: 1 , title: "To kill a Mokingbird" , author: "Harper Lee" , genre: "Fiction", yearPublished: 1960 , price: 18.99, publisher: {name:"J.B. Lippincott & Co.",location:"Philadelphia"}
+    },
+    {
+        id: 2 , title: "1984" , author:"George Orwell",genre: "Dystopian",yearPublished: 1949 , price: 15.99, publisher: {name: "Secker & Warburg",location:"London"}
+    },
+    {
+        id: 3 , title: "The Great Gatsby" , author: "F. Scott Fitzgerald", genre: "Classic" ,yearPublished: 1925, price: 10.99, publisher: {name: "Charles Scribners Sons",location:"New York"}
+    },
+    {
+        id: 4 , title: "Moby Dick" , author: "F.Scott Fitzgerland", genre: "Adventure" , yearPublished: 1851, price: 12.99, publisher: {name: "Harper & Brothers",location: "New york"}
+    },
+    {
+        id: 5, title: "Pride and Predjudice", author: "Jane Austen", genre: "Romance" , yearPublished: 1813, price: 9.99, publisher: {name: "T. Egerton",location: "London"}
+    }
+]
+
+const x = books.forEach((item)=>console.log(item.title)) 
+console.log(x)
+
+const bp = books.find((item) => item.publisher.location.toLowerCase() === 'newyork')
+console.log(bp) 
+
+
+const b190 = books.filter(book => book.yearPublished  < 1900);
+console.log(b190)
+
+const tR = books.reduce((total, book) => total + book.price);
+console.log(tR) 
+
+const book1984 = books.filter(book => book.yearPublished = 1984)
+console.log(book1984)
+
+
+
+
+
+
+CORE JAVA 
+--------------
+
+
+class Restaurant {
+    constructor(){
+        this.menu = {}
+    }
+
+    addFood(name, cuisine,type,available){
+        this.menu[name] = {
+            name : name,
+            cuisine: cuisine,
+            type: type,
+            available: available
+        }
+    }
+
+    displayMenu(){
+        console.log("Menu:");
+        for(const food in this.menu){
+            console.log(`${this.menu[food].name} - Cuisine: ${this.menu[food].cuisine}, Type: ${this.menu[food].type}, Available: ${this.menu[food].available}`);
+        }
+    }
+
+    deleteFood(name){
+        if(this.menu[name]){
+            delete this.menu[name];
+            console.log(`${name} has been removed from the menu.`);
+        }else{
+            console.log(`${name} not found in the menu.`);
+        }
+    }
+}
+
+const myRestaurant = new Restaurant();
+myRestaurant.addFood("Chiken Biriyani","South Asian","Non -veg",true)
+myRestaurant.addFood("Vegetable curry","Indian","Veg","true")
+myRestaurant.addFood("Cheese Pizza","Italian","Veg",false)
+
+myRestaurant.displayMenu();
+// myRestaurant.updateAvailability("Cheese",true);
+myRestaurant.deleteFood("Vegetalble Curry")
+myRestaurant.displayMenu();
+
+
+
+BASIC CODING LINK :-  >>>
+
+https://docs.google.com/document/d/1iQHK8H2EqpKirRdTytTCy_a57JnNdjAZG3AQp5vR6FQ/edit?usp=sharing
