@@ -1222,6 +1222,170 @@ if key is a variable
 
 
 
+*************************************************************************
+
+Functional component to click a button 
+   ---------------------------------------
+
+            function Register() {
+
+             // funtion to clickAlert
+             -----------------------------
+              const clickAlert = () => {
+                alert("Button clicked");
+              }
+
+              return (
+                <div>
+                  <h1>Register</h1>
+                  <button onClick={clickAlert}>Click</button>
+                </div>
+              )
+            }
+        
+   Function to trigger alert getUser name 
+   ----------------------------------------
+        function Register() {
+          const clickAlert = () => {
+            alert("Button clicked");
+          }
+
+          const getUsername = (data)=> {
+            alert(data);
+          }
+
+          return (
+            <div>
+               <h1>Register</h1>
+               <button classname="btn btn-primary" onClick={clickAlert}>Click</button>  // fUNCTION TO CREATE CLICK ALERT
+
+               <button classname='' onClick={()=>{getUsername('max')}}></button>   //
+                FUN TO ALERT USERNAME DATA 
+                
+                <h2>Subject is: {subject}</h2>
+                <Register formValue={"registrationForm} age={27}/> 
+            </div>
+          )
+        }
+
+
+        // here the value is passed via props 
+        function Register(props) {
+
+          return {
+            <div>
+              <h1>Register</h1>
+              <h2>{props.formValue}</h2> // how dat displayed 
+            </div>
+          }
+        }
+
+
+      Types of componemnts 
+      ----------------------
+      1)- FUNCTIONAL COMPONENT 
+
+          rafce - to load react func comp
+        
+        SYNTAX 
+        -----------
+        
+        function functionname(){
+          // js code 
+          return{
+            // div 
+          }
+        }
+
+        export default functionname
+        
+        2) class component 
+
+          rcc - to load react class component 
+
+          export default class classname extend component{
+            // js code 
+            render(){
+              return(
+                // div 
+              )
+            }
+          }
+
+
+      OBJECT DE-STRUCTURING 
+      ----------------------- 
+      ACCESSING PARTICULAR KEYS FROM AN OBJECT 
+      syntax 
+      {key, ....}
+      
+      eg :- 
+      function Register({RegisterationForm})
+
+
+      //accessing of props (inside a component)
+
+      if a function component 
+      has constructor then props be called inside the 
+      copnstructor 
+
+      eg :- export default class Random extends Cpmponent{
+        /* to accesss data from the derived class */
+        constructor(props){  
+          super(props)
+        }
+
+            render() {
+              return (
+                <div>
+                  <h1>Username is {this.props.username}</h1>
+                </div>
+              )
+            }
+          }
+
+     DAT-Sharing in Componenst uni-directional data ==> props 
+     ------------------------------
+
+       1) functional component = function functionalname(props){}
+       2) class component = constructor(props){
+         super(props)
+       }
+
+      
+       
+       STATE 
+       ------------
+       -STATE IS A LOCAL VARIABLE OF A COMPONENT
+      - state is an object which store properties of a react class component {key:value}
+      - when the state changes its value the entire component re-render 
+      - setState() - is the function used to change value of the state .
+
+
+
+
+      LIFE-CYCLE OF A CLASS COMPONENT 
+      ------------------------------- 
+      1)  mounting phase -component adding to DOM 
+          -constructor() - it initialize the state variable.
+          - getDerivedStateFromProp() -return object if the components is having any data from parents to update the state, else return null.
+          -render() - render jsx code into browser -return the component output
+          -componentDidMount() - network Call (API)
+
+
+      2) Updating Phase - Editing component 
+
+              
+          -GetSnapshotBeforUpdate() - this function invokes right before the updation in vdom is reflected to rdom 
+          -shouldComponentUpdate() - returns a boolean value true - if there is updation else false 
+          -render() - renders the jsx code into browser - returns components output
+          -getSnapShotBeforeUpdate()- this function invokes right before the updation in vdom reflected in rdom 
+
+      3) unmounting Phase - removal of component from DOM 
+        -componentWilMount()
+
+
+
 
 
 
@@ -1232,6 +1396,7 @@ if key is a variable
 
         
   
+
 
 
 
