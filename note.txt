@@ -1198,15 +1198,17 @@ if key is a variable
           Uniform resource locator 
 
           RESTFUL API - Architecture 
+          REST is a software architectural style that defines the set of rules to be used for creating web services
 
-          SOAP 
+          SOAP - a standard protocol that allows applications built on different platforms and languages to communicate with each other
 
           API Testing TOOL 
           ----------------- 
           - thunder client - vs code 
           - postman - chrome extension 
 
-          - Asynchronous 
+          - Asynchronous METHODS 
+          ------------------------ 
 
           1) AJAX - Asynchronous JavaScript XML
             - XMLHttpRequest CLASS 
@@ -1215,10 +1217,64 @@ if key is a variable
 
           2) Fetch - promise class 
            - promise - ASYNCHRONOUS function 
+           Fetch always request a promise- which is special represntation of  eventual outcome  async operation
            - three state 
-              1) resolve/fullfill 
+              1) resolve/fullfill - then()
               2) pending
               3) reject/rejected -catch()
+
+           3) async await 
+           --------------- 
+           - it return promise - response - then() 
+           - syntax 
+             variable = async() => {
+               //api 
+               await fetch()
+             }
+
+             -can store that response into a variable 
+             - single .then()
+
+             -await be always be placed inside async function
+
+                /* async function search(){
+                  console.log(inputvalue.value);
+                  if(inputvalue){
+                      await fetch()
+                  }
+                  else{
+                      alert("Please Enter the country name")
+                  }
+                }
+
+                */
+                
+
+                ##  Basic Syntax   METHOD-((1))
+                async function Search(){
+                  console.log(inputvalue.value)
+                  if(inputvalue){
+                    await fetch()
+                  }else{
+                    alert("Please Enter the country name")
+                  }
+                }
+
+                ##  Basic Syntax   METHOD-((2))
+
+                   const search = async()=>{
+                    console.log(inputvalue.value)
+                    if(inputvalue.value){
+                        const res = await fetch('')
+                        console.log(res)
+                        res.json().then((data)=>{     // res.json()  will convert data into JSON Format
+                            console.log(data)
+                        })
+                    }
+                    else{
+                        alert("Please Enter the country name")
+                      }
+                  }
 
 
 
@@ -1239,12 +1295,255 @@ if key is a variable
 
 
 
+    REACT 
+    ------- 
+    - it is a open-source web-application library 
+    -developed and maintained by facebook/ meta 
+
+    features of react 
+    ------------------- 
+    - to create UI 
+    -USED FOR building single page application (SPA) -only page loads / render in the browser - index.html 
+    -Virtual D O M 
+      -Copy of real dom -created by react 
+      -diffing - process of comparing vdom and rdom 
+      -reconsilation - updating only the node which have been undergone the changes
+         -- it will reduce the loading time -entire application can be reloaded for each updates - website optimization 
+
+         - language -jsx - javascript xml (combination of js, html , css )
+           transpilling - convertion of jsx into browser understtod language  
+        - data sharing - unidirectional - parent-child -  with the help of pre-defined object called props 
+
+        how to create a react project
+        ------------------------------
+
+        - command : npx create-react-app projection 
+
+        files 
+        --------
+        1) README.md - document of this applications.
+        2) package.json - npm configuration - installed libraries - dependencies.
+        3) package.lock.json - installed libraries - version and some important features to run that modules in the application. 
+        4) node_modules  - contains the copy of the libraries installed in the application.
+        5) .gitignore - file that need to be ignore while pushing into git repository.
+        6) public - contents that are available throughot the application.
+        7) app - component - js file , css file 
+        8) index.css - to provide global styling 
+        9) reportWebVital.js - to check performance of website.
+
+        component - it is the basic unit of UI features
+        -------------
+        - component name should start with capital letter 
+        -renamming is not-possible 
+        -extention- js, jsx 
+        -js code are placed above return statement
+        - all tags inside a return function should places inside a single tag 
+
+        - react fragment <></>
+
+        styling 
+        -------- 
+        1) inline 
+           object
+           - style="property:value font-size:'50px'"
+            - style={{property: value}}
+        
+        2) external 
+          - external file - with extention as .css 
+          - import the css file in the js file using 
+          import keyword 
+      
+        3) css module 
+
+        -- create an external file with extention as .module.css 
+        - to style more than one component by storing the data in a variable.
+        - import the file in the particular component
+        - must be created inside the src folder 
+        
+        js--javascript 
+        ----
+        js is applied using curly bracket in React 
+        
+
+        component can be wrapped in two ways :- 
+          1)-- Each component can be wrapped in App component - directly  
+          2)-- Each cpmp canm be wrapped indirectly 
+           -- at the another comnponent itself (Indirect wrapping)
+
+           functions 
+          ------------ 
+
+          - function without argument 
+          - functionname 
+          eg:- add 
+
+          - function with argument 
+              - callback
+           
+            eg:- ()=>{add(arg1..argn)}
+
+
+
+   Functional component to click a button 
+   ---------------------------------------
+
+            function Register() {
+
+             // funtion to clickAlert
+             -----------------------------
+              const clickAlert = () => {
+                alert("Button clicked");
+              }
+
+              return (
+                <div>
+                  <h1>Register</h1>
+                  <button onClick={clickAlert}>Click</button>
+                </div>
+              )
+            }
+        
+   Function to trigger alert getUser name 
+   ----------------------------------------
+        function Register() {
+          const clickAlert = () => {
+            alert("Button clicked");
+          }
+
+          const getUsername = (data)=> {
+            alert(data);
+          }
+
+          return (
+            <div>
+               <h1>Register</h1>
+               <button classname="btn btn-primary" onClick={clickAlert}>Click</button>  // fUNCTION TO CREATE CLICK ALERT
+
+               <button classname='' onClick={()=>{getUsername('max')}}></button>   //
+                FUN TO ALERT USERNAME DATA 
+                
+                <h2>Subject is: {subject}</h2>
+                <Register formValue={"registrationForm} age={27}/> 
+            </div>
+          )
+        }
+
+
+        // here the value is passed via props 
+        function Register(props) {
+
+          return {
+            <div>
+              <h1>Register</h1>
+              <h2>{props.formValue}</h2> // how dat displayed 
+            </div>
+          }
+        }
+
+
+      Types of componemnts 
+      ----------------------
+      1)- FUNCTIONAL COMPONENT 
+
+          rafce - to load react func comp
+        
+        SYNTAX 
+        -----------
+        
+        function functionname(){
+          // js code 
+          return{
+            // div 
+          }
+        }
+
+        export default functionname
+        
+        2) class component 
+
+          rcc - to load react class component 
+
+          export default class classname extend component{
+            // js code 
+            render(){
+              return(
+                // div 
+              )
+            }
+          }
+
+
+      OBJECT DE-STRUCTURING 
+      ----------------------- 
+      ACCESSING PARTICULAR KEYS FROM AN OBJECT 
+      syntax 
+      {key, ....}
+      
+      eg :- 
+      function Register({RegisterationForm})
+
+
+      //accessing of props (inside a component)
+
+      if a function component 
+      has constructor then props be called inside the 
+      copnstructor 
+
+      eg :- export default class Random extends Cpmponent{
+        /* to accesss data from the derived class */
+        constructor(props){  
+          super(props)
+        }
+
+            render() {
+              return (
+                <div>
+                  <h1>Username is {this.props.username}</h1>
+                </div>
+              )
+            }
+          }
+
+     DAT-Sharing in Componenst uni-directional data ==> props 
+     ------------------------------
+
+       1) functional component = function functionalname(props){}
+       2) class component = constructor(props){
+         super(props)
+       }
+
+      
+       
+       STATE 
+       ------------
+       -STATE IS A LOCAL VARIABLE OF A COMPONENT
+      - state is an object which store properties of a react class component {key:value}
+      - when the state changes its value the entire component re-render 
+      - setState() - is the function used to change value of the state .
 
 
 
 
+      LIFE-CYCLE OF A CLASS COMPONENT 
+      ------------------------------- 
+      1)  mounting phase -component adding to DOM 
+          -constructor() - it initialize the state variable.
+          - getDerivedStateFromProp() -return object if the components is having any data from parents to update the state, else return null.
+          -render() - render jsx code into browser -return the component output
+          -componentDidMount() - network Call (API)
 
 
+      2) Updating Phase - Editing component 
+
+              
+          -GetSnapshotBeforUpdate() - this function invokes right before the updation in vdom is reflected to rdom 
+          -shouldComponentUpdate() - returns a boolean value true - if there is updation else false 
+          -render() - renders the jsx code into browser - returns components output
+          -getSnapShotBeforeUpdate()- this function invokes right before the updation in vdom reflected in rdom 
+
+      3) unmounting Phase - removal of component from DOM 
+        -componentWilMount()
+      
 
 
 
