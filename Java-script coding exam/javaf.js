@@ -26,8 +26,13 @@ console.log(bp)
 const b190 = books.filter(book => book.yearPublished  < 1900);
 console.log(b190)
 
-const tR = books.reduce((total, book) => total + book.price);
-console.log(tR) 
+console.log("---------------------------------------------------")
+
+const bx = books.filter(book => book.yearPublished < 1900);
+console.log(bx)
+console.log('****************************************************')
+const tR = books.reduce((total, book) => total + book.price, 0);
+console.log(`price of the book is ${tR}`) 
 
 const book1984 = books.filter(book => book.yearPublished = 1984)
 console.log(book1984)

@@ -14,8 +14,15 @@
 
 // }
 
-const arr = [5,4,3,2,1]
+// const arr = [5,4,3,2,1]
 
-for(let i= arr.length; i>0; i--){
-    console.log(arr.slice(0,i).join(' '))
+// for(let i= arr.length; i>0; i--){
+//     console.log(arr.slice(0,i).join(' '))
+// }
+
+
+const arr = [5,4,3,21,1]
+
+for (let i=arr.length; i>0; i--){
+    console.log(arr.slice(0,i).join(" "))
 }

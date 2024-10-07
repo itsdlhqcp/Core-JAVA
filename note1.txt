@@ -1,0 +1,420 @@
+## INFOSYS JAVA DEVELOPMENT INTERVIEW QUESTIONS 
+
+1. What are profiles in spring boot ? How it works?
+
+profiles are a way to set different sets of configuration of an application based on different runtime environment or deployment senarios.
+
+profiles are typically defined in the `application.properties` or `application.yml` file using the `spring.profiles.active` property.
+
+advantages:-
+  1) Configuration seperation: With profiles, you can define
+    seperate configuration files for different environment ,
+    such as deployment, testing, staging and production. 
+
+  2) Application Properties: You can define profile specific properties in the `application-{profile}.properties` or `application-{profile}.yml` files.
+       
+  3) Command -line or Environment activation: Profiles can be a activated using command-line arguments
+        eg :- `spring.profiles.acivate` property to `dev` to
+        strat your application at profile environment 
+
+   4) Default Profile : If no profile is explicitly activated , Spring Boot uses `default` profile by default.
+
+
+   2. How does Spring Boot helps building microservices archtecture?
+
+      1) Light -weight and Stand-alone : Spring-boot allow you to build stand alone micro-services that can run independently.
+
+      2) Service registration and discovery: Eureka is a service registry and dicovey server that allow micro-sevices to register themselves and discover other services.
+
+      3) Distributed Configuration: Spring cloud allow you to externalize config properties and retrive them from config server.
+
+      4)Load balencing and Resilance : It helps to Distribute incoming requests and provide fault tolerance by automating routing requests to healthy instances.
+
+      5) Circuit Breaker pattern: It helps in managing faults and failures in distributed systems by providing fallback mechanisms.
+
+      6) API Gateway: Spring Cloud Gateway acts as an entry point for incoming requests and can perform routing, filtering and load balencing.
+
+      7) Monitoring and Metrics: Spring boot Actuators provides production ready end-points for monitoring and managing micro-services.
+
+
+
+      3. What is difference between authentication and authorization?
+
+        Authentication                                 Authorization 
+        ----------------                              ----------------
+        1) Verify identity of user or               1) Determines what
+            entity                                   action or operation
+                                                      a user allowed
+                                                      
+        2) Ensure only authenticated user           2) control access
+         can only access protected resources         and permissions
+
+         3)Validate user credentials                 3) Define role or
+                                                        permissions 
+                                                        associated with 
+                                                        user
+
+        4) Form-based authentication,                 4) Roll-based 
+           basic-authentication ,                       access control
+           token based auth 
+
+# Write a simple java program to check a number is satisfy the condn.
+      problem statement ::--
+
+      Input list :- [1,2,3,4,5]
+      Output :-All nums are not even numbers 
+       
+      import java.util.*;
+      import java.io.*;
+
+      public class CheckALLeLEMENTsATISFY {
+        public static void main(String[] args) {
+         List<Integer> numbers = Arrays.asList(1,2,3,4,5);
+         boolean res = numbers.stream().allMatch(n->n%2==0)
+         if(res){
+            System.out.println("All are even nums")
+         }else{
+            System.out.println("All nums are not even numbers")
+         }
+
+        }
+      }
+
+
+      # problem statements :- 
+      Find the first element starting with charecter b 
+
+      Input list : ["apple","bannana","grapes","blueerry"]
+      Output :- bannana 
+
+      import java.uitil.*;
+      import java.io.*;
+
+      public class stringb{
+        public static void main (string () args){
+            List<String> names = Arrays.asList("apple", "bannan", "grapes", "blueberry");
+
+            Optional<String> res = names.stream().filter(name -> name.startsWith("b")).findFirst();
+
+            System.out.println(res)
+        }
+      }
+
+
+      # what will be output of following code:-
+
+      public class Test {
+        public static void main(String[] args) {
+            for(int i=0; 0; i++){
+                System.out.println("Hello World");
+            }
+        }
+      }
+
+      options:-
+      1. Hello World!
+      2. no output 
+      3. Compilation Error 
+      4. Runtime error
+
+      ans:- Compilation error as 
+        the middle element should be a condition 
+        should be given 
+
+Q:- Angular Interview Questions:- 
+1. Expalin the concept of Data Binding in angular?
+   --> Data binding in Angular is a core concept that facilitates communication between the components TypeScript (the Model) and the view (HTML). iT HELPS in synchronize between two ensures any changes in component reflects in view and vice versa.
+2. How do you handle routing in Angular?
+  --> In Angular, routing is handled by Angular Router module, Which allow naviagtion between different view and components of single page applications (SAP) behaviour, where different components are displayed dynamically.
+3. How do you communicate with component in Angular ?
+
+There are several way to communicate between components :- 
+   1-->Input and Output Properties  (Parent child communication)
+            @Input() and @Output()
+
+    2--> Service with observable
+        which is done by using RxJS communication 
+
+    3--> Local Referance and ViewChild Communication 
+       Access child component using @ViewChild()    
+4. Expalin the difference between ngOnInit and constructor in Angular?
+
+  Constructor :-  Is a TypeScript feature and its primary role is to initialize class properties and set up the dependencies.
+
+  ngOnInit() :- part of Angular life cycle hook. It is used for fetching data , interacting with services and used for any setUp tasks.
+5. How do you handle HTTP requests in Angular?
+
+In Angular, HTTP requests are handled through the HttpClient service.
+which is a part of @angular/common/http package. 
+
+It gives a powerful and flexible way to make HTTP requests such as 
+GET ,POST ,PUT ,DELETE and work with promises.
+
+
+-------------------------------------------------------------------------
+
+    JAVA developer BASIC INTERVIEW QUESTION :- 
+
+     Q. Why string is Immutable or Final in Java 
+
+    1. Security 
+    2. Multi-threading - It is a programming technique in
+       Java that allow a single application to perform 
+       multiple operations simultaneously.
+    3.  If one referancial variable changes the value of an object, it will be effected by entire referancial
+        variable
+        
+
+        Q. Checked exception 
+           - No Such Field Exception 
+           - JVM needs handling 
+           - Compile time 
+                 VS 
+          Unchecked Exception 
+            - Null Pointer 
+            - No handling 
+            - Run time 
+
+
+        Q. C++      Vs       JAVA 
+
+          -Platform dependent     -Platform independent 
+          -Multiple Inheritance   -No multiple inheri.    
+          -Operator overloading   -No operator overloading
+          -No build in support for  -Build in support for threads    
+
+          ## Story Points in Agile
+
+            It is measurements that developers
+            use instaed of hours 
+           
+
+           ##    JDK          VS       JVM       VS             JRE 
+
+
+              JRE +                 Interpreter,                  only  
+              Development          part of both JDK and JRE,       run
+              Tools (java, javac)    to run program line by line   java
+                                                                   apps
+              -develop & run
+
+                          JDK 
+                     ---------------
+                     Development tools
+                     (javac, jheap, jconsole, etc)
+                            JRE 
+                          --------
+                     Java Class Library 
+                           JVM 
+                          -----
+
+
+        Q:- Why Java IS NOT fully object oriented ?
+
+          In JAVA we use data type like int, float, double..
+          which are not object oriented 
+
+
+
+          ###  Method Overloading vs Method overriding
+
+           class Animal {
+               void eat(){
+                System.out.println("eating ");
+               }
+           }
+
+           class Dog extends Animal {
+              void eat() {
+                System.out.println("Dog is eating");
+              }
+           }
+
+
+    Q. JPA VS Hibernate 
+       
+           JPA :- is just like an interface and have no concrete 
+                  implementation of it to use functions which are 
+                   there in JPA
+
+           Hibernate :- is just a JPA provider which used for implementation of the JPA functions and can have some extra functions there not in JPA \
+
+
+
+    Q. Spring                  VS          SPRING BOOT
+
+    Dependancy injection - is a               Spring Boot is Module of 
+    design patttern in spring framework        Spring Framework
+    that injects dependencies into a 
+    class or Components                        Auto-Configuration
+
+    we need to set-up server explicitly          Embedded server 
+
+    No support of in-memory Database            In-memory Database   
+
+
+Q. Agile                VS                      Scrum 
+
+Agile is development methodology           -SCRUM is one of implm. of agile
+based on iterative and incremental           methodology where incremental is done
+approach                                      and delivery done by two to three 
+                                              weeks time. 
+
+Q. How to overload and overide the main method in JAVA ?
+       
+       public class solution {
+          public static void main(String[] args){
+            System.out.println("main methos");
+          }
+
+          public static void main (String[] args ){
+            System.out.println("override main");l
+          }
+       }
+
+       // In This method the second method will execute
+
+
+Q. What are the 4 pillers of OOPS?
+     1. Abstraction 
+
+      - Abstraction is the property of hiding implementation and 
+        showing only the functionality to the user 
+
+        ex:- In case of TV REMOTE implentaion of circuit is
+        hidden and function done by clicking the button
+
+     2. Encapsulation
+
+       Enscapsulation is the process of binding data and methods within
+       a class. It is showing only essential details (public, private, proctored , ...)
+
+     3. Inheritance 
+
+       Inheritance means definning a parent child relationship between
+       classes
+       eg:- car is child of the vechicle 
+     4. Polymorphism 
+
+       Poly means many and Morph means forms. Polymorphism is a method 
+       in which an object or function takes different forms. 
+       There are different types of Polymorphism:-
+         1. Compile time polymorphism (Methos Overloading)
+         2. Run time Polymorphism (Method Overiding )
+
+
+
+
+Q. What is an abstract class ? 
+
+A class taht is declared using abstract keyword is known as abstract class. It can have abstract method as well as concrete method 
+
+some step to remember :-
+
+An abstract class cannot be initiated, which means you are not allowed to create object of an Abstract class, it means abstract class is extended using some other class.
+
+
+Q. Does Abstract class have constructor ?
+
+Yes Abstract class have constructor. Either you can provide it or 
+default will be provided by Java
+
+Constructor are used when you are creating object of a class, to initialize data member of a class and your abstract class have data member .
+
+Q. What is an interface ?
+
+An interface in Java is blue-print of a class. It has static constants and Abstract methods. 
+
+Interface specify what a class must do and not specify how to do.
+
+An interface is like contract like definning implementation of a classes.
+
+An interface is used to achieve full Abstraction
+
+All methods in an interface are public and abstract by default and '
+alll variables declaredc are constants i.e public , static and final 
+
+
+
+Q. Difference between abstract class and interface .
+
+The difference are :
+
+Abstract class has both abstract and concrete methods
+
+but interface can only have abstract method 
+
+
+Q. Which is better or good choice, Abstract class or interface method?
+
+Most of the times, Interfaces are a good Choices . It is best practices, when you code in term of interfaces.
+
+
+Q. Why Java 8 Introduced default method?
+
+To extend the capability of already existing interface, default methods are introduced in Java 8.
+
+Q.Why Java 8 has introduced  static methods ? 
+
+In usual method where you use a utility class inside which a method is called to define a class.
+
+In Java 8 you can do the same thing by using an interface by using a static method which helps to define interface which helps to define the performance because class is more expensive operation than interface.
+
+
+
+
+
+-------------------------------------------------
+-------------------------------------------------
+
+
+
+   Explain the code output:- 
+
+  String s1 = new String("abc");
+  String s2 = new String("abc");
+  System.out.println(s1 == s2);  // false as differ. memory locations 
+  System.out.println(s1.equals(s2)); // true as only compare the contents
+
+  How many objects will be created in the code? 
+  String s1 = new String("Hello");
+  String s2 = new string("Hello");
+
+  // 3 object first when assigning 
+    2nd one while checking any dup. avail. 
+    3rd one when hello allocated to s2 
+
+    // Differ. between abstract class and inheritance class 
+
+    // Examples of threads and collections in JAVA 
+
+    //EXAMPLE OF THREADS IF COLLECTIONS IN java 
+
+    ##con-current hashmap 
+     -In synchronous hashmap has on whole map 
+     - In concurrent hasmap - locj is on particular node 
+    
+     ##copy and write array-list
+
+     in array-list for writing it uses write 
+     and for reading it uses copy function
+
+
+     // Optional class in JAVA 8 
+       METHOD REFERANCE IN JAVA-8 
+
+      Q. Different ways to do dependency injection:- 
+
+        by using setters and getters
+        by using constructor 
+
+
+        Q. What are differnt scopes of spring ?
+
+        - iN SPRING  bean scope 
+        Spring provides differnt scopes
+          1)) Singleton (Default Scope)- Spring creates only one instance of the beam per scope and single instance is created across the entire application
+
+          2)) Prototype -
+              In protoype - new instance is created at each time it is requested from the container.
+

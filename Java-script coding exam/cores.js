@@ -1,5 +1,5 @@
 class Restaurant {
-    constructor(){
+    constructor(){                              //CONSTRUCTO     // METHOD       // PROPERTY
         this.menu = {}
     }
 
@@ -27,8 +27,6 @@ class Restaurant {
             console.log(`${name} not found in the menu.`);
         }
     }
-
-
 }
 
 const myRestaurant = new Restaurant();
@@ -40,3 +38,4 @@ myRestaurant.displayMenu();
 // myRestaurant.updateAvailability("Cheese",true);
 myRestaurant.deleteFood("Vegetalble Curry")
 myRestaurant.displayMenu();
+

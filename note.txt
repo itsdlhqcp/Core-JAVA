@@ -804,9 +804,7 @@ features:-
         --------------------
         1) push(item) - to add an item as the last item to an array 
         2) unshift(item) - to add an items as item as an array 
-
         3) pop() - to remove the last item of a given array
-
         4) shift() - used to remove the first item of a given array 
 
         different way to access item from an array 
@@ -948,9 +946,7 @@ if key is a variable
     - class contains 
      1) property
      2) methods
-
-
-      3) constructors 
+     3) constructors 
      - its not madidatory that all this three components always inside the class always
 
         
@@ -1030,7 +1026,6 @@ if key is a variable
        - executes based on the arguments .
        - javascript doesnot support method overloading
     2) method overriding 
-
       - method with same name and same of arguments 
       - execute the last written method 
 
@@ -1281,6 +1276,21 @@ if key is a variable
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
 
 
@@ -1295,7 +1305,7 @@ if key is a variable
 
 
 
-    REACT 
+    REACT.JS
     ------- 
     - it is a open-source web-application library 
     -developed and maintained by facebook/ meta 
@@ -1443,7 +1453,8 @@ if key is a variable
 
       Types of componemnts 
       ----------------------
-      1)- FUNCTIONAL COMPONENT 
+      1)- FUNCTIONAL COMPONENT / 
+         stateless component 
 
           rafce - to load react func comp
         
@@ -1459,7 +1470,7 @@ if key is a variable
 
         export default functionname
         
-        2) class component 
+        2) class component / stateful Component
 
           rcc - to load react class component 
 
@@ -1522,45 +1533,407 @@ if key is a variable
       - setState() - is the function used to change value of the state .
 
 
-
-
       LIFE-CYCLE OF A CLASS COMPONENT 
       ------------------------------- 
+      mounting phase - component adding to DOM
+      updating phase - editing component
+      unmounting phase - removal of component from DOM
+      
       1)  mounting phase -component adding to DOM 
           -constructor() - it initialize the state variable.
           - getDerivedStateFromProp() -return object if the components is having any data from parents to update the state, else return null.
           -render() - render jsx code into browser -return the component output
           -componentDidMount() - network Call (API)
 
-
       2) Updating Phase - Editing component 
 
-              
           -GetSnapshotBeforUpdate() - this function invokes right before the updation in vdom is reflected to rdom 
           -shouldComponentUpdate() - returns a boolean value true - if there is updation else false 
           -render() - renders the jsx code into browser - returns components output
           -getSnapShotBeforeUpdate()- this function invokes right before the updation in vdom reflected in rdom 
+          -ComponentDidMount() - after DOM is updated  now handle side effects effects 
 
       3) unmounting Phase - removal of component from DOM 
-        -componentWilMount()
+        -componentWilUnmount() - it is used to clean up the component before component is removed from the DOM.
+      
+      4) Error handling phase 
+          1- getDerivedStateFromError() - error ui 
+          2- componentDidCatch() - return log 
+
+     HOOKS 
+     --------- 
+     - Functions which provides state and life-cycles for a functional component in react applications
+     - hooks are of two types 
+     1) pre-defined hooks 
+       - useState  - inorder to create a state in functional component 
+       - return - state , function to change the status 
+
+       - Syntax :- 
+        const [state, function] = useState(initial value)
+
+        2) custom hooks 
+        
+        Rules to use a hooks 
+        -----------------------
+        - import hooks from the React library
+        - Hooks are call at Top of the js parts 
+        - we cannot use hooks at conditional basis 
+         ex:- 
+
+         function App (){
+          const [cname, setCname] = useState("Switch")
+           const change = (data)=>{
+            setCname(data)
+           }
+          return (
+            <>
+            <h1></h1> <button onClick={()=>change('auto)}>Change</button>
+            </>
+          )
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Angular.js
+      -----------------
+      -Command to create a new angular project :- 
+      ng new projectname
+
+      -To create a specic component with name:-
+        ng g c foldername/componentname     -- ng generate component foldername/componentname 
+      
+      It is a booming-front-end development frame-work 
+
+      Angulat.js provides capabilities to create Single page app in a very clean and maintainable way
+        
+      Angular.js is a framework which was developed by Google which uses typeScript for implementation of different logics in it.
+
+      What is Angular.js? 
+     - A java-script frame-work for building single page web-applications.
+     - It is used to build dynamic Responsive web applications. 
+
+     Features :-
+     -It provides many features including routing, HTTP requests, form handling and bi-directional data-flow. 
+     -It also has component based data architecture which allow dev to build independent applications.
+     
+     Build-In services 
+
+     -Angular.Js has many build-In services ,each with a specific task.
+     -Most import services includes -$http, $window ,$Location, $timeout , $Log , and $sanitize.
+
+     Link functions 
+
+     -The link function combines the directives with a scope to produce live view .
+     -It is responsible for instance DOM manipulation and collecting all the directives.
+
+     Compile Function 
+     
+     -The compile function is responsible for template DOM manipulation and collecting of all directives 
+      
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input
+        type="password"
+        pInputText 
+        formControlName="password"
+        class="w-full"
+        name="password"
+        placeholder="Type your password"
+        />
+        <small
+        *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error"
+        >
+        <div *ngIf="password.errors?.['required']">Password is required.</div>
+        </small>
+      </div>
+
+
+      ==>components - can be pre-build using functions.
+      
+      ==> services - auth.services.ts 
+                   - auth.service.specs.ts 
+
+      ==>  for adding new modules into the project 
+        inside app.modules.ts  
+        eg :- PRIMENG were differ. comp can be get like card 
+
+
+        ==> Inside app.component.html add
+           <router-outlet></router-outlet>
+
+           were routing is done on routing dervative
+
+-----------------------------------------------------------------------------
+Angular.Js Interview questions:- 
+
+  Q) Main advantage of Angular.js over React.js :-
+
+    # Dependency injection :- Angular.js support dependency injection, which allows for distinct lifecycles for different stores.
+    # Angular has single component based routing, which is better than dynamic web apps 
+  
+  1) What is TypeScript? 
+
+    -Typescript is a superset of JavaScript that allow excelent consistency.
+    -It is highly consistent as it provide synthatic sugar and make code base more comfortable.
+    -Typescript code compiles down to javascipt which can run on any environment.
+   
+   2) what id Data binding ? what type of data binding angular uses?
+
+   Data binding is a phenomenon that allows any internet user to manipulate Web page element using a web browser. It uses dynamic HTML and does not uses complex scripting. 
+
+   Angular uses the two-way binding. Any changes made to the user interface are reflected in the corresponding model state. Conversely, any changes in the model state will be reflected at UI state. This allow the framework to connect to the DOM via controller. 
+
+   Single page application are web applications that l;oad once with new features mere in addition to user interface.
+   
+  This is made possible by making the javascript ability to manipulate the 
+  DOM element to existing page itself.
+
+  3) Difference b/w Angular and Angular JS 
+
+            Angular JS                   Angular 
+           -------------                ----------
+           JAVASCIPT                     TypeScript
+            
+           Supports MVC design         Uses components and directives
+            
+            Dependency injection -       Supports dependency injection
+            Doesnt support 
+
+            @routeProvider used for       @Route Config. used for
+            routing information             routing information
+
+            Difficullt to manage with an     Better structured, easy to
+            increase in source code size      create and manage 
+
+
+    4) What are decorators in Angular?
+
+    Decorators are a design pattern or functions that define how Angular feature works. They are used to make prior modification to a class , service or filter. Angular support four types of decorators:- 
+
+      1. Class Decorators 
+      2. Property Decorators 
+      3. Method Decorators 
+      4. Parameter Decorators
+
+      5) Mention some adv. of Angular 
+            -- MVC Architecture - how application be structured
+            -- Dependency Injection
+            -- Modules based architecture 
+            -- Two way data binding
+
+      6) What are the updates with Angular 10? 
+          --older version of typescript not supported
+          --warning about common.js imports 
+          --Optional strict setting 
+          -- Url routing updation
+
+        7)What are templates in Angular?
+
+        Angular templates are made with HTML which made with angular specific elements and attributes. In combination with model and controllers information, this templates are further rendered to provide dynamic web view.
+
+        8) What are Annotations in Angular? 
+
+        Annotations in Angular create an annotation array.
+        They are the metadata set consist of meta data library.
+        
+        9) What are Directives in Angular? 
+
+        Directives are attributes that allow the user to write HTML syntax to their applications. They execute whenever thaey are present in DOM.
+        ANGULAR SUPPORTED DIRECTIVE ARTE :-
+           1. COMPONENT DIRECTIVE 
+           2. STREUCTURAL DIRECIVES 
+           3. ATTRIBUTE DIRECTIVES 
+
+        10)what is AOT Compilation? What are its advantages? 
+
+        The Ahead of Time (AOT) -compiler in Angular converts the HTML and typescript code into javascript code during the compilation phase before browser and compile and run the code 
+        
+        some adv. are :- 
+        -- faster rendering 
+        -- fever asynchronous requests 
+        -- smaller download size 
+        -- better Security
+        -- quick error detection 
+        
+        11) Components in Angular ?
+
+        Components are the basic building blocks of user interface in Angular Application. Every comnponent will be associated with a 
+        template and subset of derivatives .
+
+        12) What are Pipes in Angular ?
+          
+          Pipes are simple functions designed to accept input and will return an output.
+          
+          13) What is Pipe Transform interface ?
+          
+          as name suggest it transform the input to specific format 
+          using the transform() method.
+
+          14)What are Pure Pipes ?
+          These are pipes that uses pure functions, as a result a pure pipe Doesnt use any internal instances .
+
+          15) impure pipes ?
+            input passsed to this pipes are mutable.
+
+            16) What is NgModule?
+
+            --NgModule are container that reserve a block of code to an application Domain or a workflow. 
+           -- @NgModule takes metadata as object and it generally describe the way it compile
+           --- It identifies the pips, directive and componemnts and export it using export functions. 
+
+           17) What are filters in Angular? name few of them 
+
+           Filters are used to format a regular expression and present it to the user.
+
+            -data -Format to a specific format
+            -filter - Select a subset of item from an array 
+            -Json - Format an object to JSON format 
+            -lowercase - Convert a string to lowercase 
+            -limitTo - Limits to an Array
+            
+            18) View Encapsulation in Angular ?
+            
+            View encapsulation defines wheather template or style can effect entire application 
+
+            three strategies are :- 
+                  --Emulated
+                  --Native 
+                  --None 
+            19) What are Controllers ? 
+             Control data of angular applications.
+              
+          
+
+            
+        
+           
+
+
+
+           
+            
+        
+    
+         
+
+    SPRING-BOOT 
+    ----------------------- 
+   Spring-boot will provide all the dependencies and
+   entire configuration of the system - helps to provide production ready application - to host the 
+   service you dont need any further configuration to be done at backend 
+
+   spring framework focus on providing flexibility to you, spring boot help to shorten code length and help to develop web application.
+
+   maily help to develop the stand-alone we application or with zero configration.
+    
+    Spring Features :-
+      - POJO 
+      - Dependency Injection
+      - MVC 
+      - REST 
+      - Security
+      - Batch
+      - Data 
+      - AOP ...
+
+      we can also join many frame-work like 
+      - Hibernate 
+      - Struts 
+
+      string boot web starter will helps to start a 
+      new web application 
+
+
+
+      Spring Framework 
+      -------------------
+
+      - Spring is widely used Java EE framework for building applications. For java platforms.
+      - It simplify java EE Framework AND HELPS developers more productive.
+      - unlike other application, spring focuses on several areas of applications  and provide wide range of features. 
+      - One of major feature of spring application is dependency injection. It help make applications simpler and help to develop loosely coupled applications.
+
+      ==> Benifits Of Spring Boot over Spring :-
+        1) Dependancy resolution
+        2) Minimum configuration 
+        3)Embedded server for testing 
+        4) Bean Auto scan '
+        5) Health metrics 
+
+
+      
+      
       
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 
@@ -1576,13 +1949,13 @@ if key is a variable
      -JSX (JavaScript XML) (IMPROVES PERFORMANCE)
      -Rich eco-systems, libraries and tools -allow easy debugging
 
-   # How does React code work in the background ? 
-   -React code works in background by using virtual DOM for efficiently update the actual DOM
-   -IT using a diffing algorithm to reconcile the changes .
-   -It uses  component based architecture to manage states and render UI dynamically.
-   -It uses JSX to write HTML in React code.
-   -Virtual DOM  is a light-weight, in memory representation of the Actual DOM. React uses 
-   it to efficiently updates the real DOM -(Document Object Model)
+    # How does React code work in the background ? 
+    -React code works in background by using virtual DOM for efficiently update the actual DOM
+    -IT using a diffing algorithm to reconcile the changes .
+    -It uses  component based architecture to manage states and render UI dynamically.
+    -It uses JSX to write HTML in React code.
+    -Virtual DOM  is a light-weight, in memory representation of the Actual DOM. React uses 
+    it to efficiently updates the real DOM -(Document Object Model)
 
    # Why React is not just JAVASCIPT ? 
      -JavaScript alone can become more complex and in-efficient to build modern websites   and UIs.
@@ -1663,9 +2036,6 @@ if key is a variable
  ==> How to converting class based to functional based components ? 
     
     -Involves replacing lifecycle methods with hooks, primarily useEffect for managing side effects. 
-
-
-
 
     Node.js 
     ---------
