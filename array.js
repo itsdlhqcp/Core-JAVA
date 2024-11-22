@@ -33,10 +33,6 @@ console.log("-------------------------------------")
 
 fruit = ['Apple','Orrange','Kiwi','Pine-Apple']
 
-for(i=0; i<fruit.length; i++){
+for (i=0; i<fruit.length; i++){
   console.log(fruit[i])
 }
-
-//  for (i=0;i<=fruit.length-1;i++){
-//    console.log(fruit[i])
-//  }

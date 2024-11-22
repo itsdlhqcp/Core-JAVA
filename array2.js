@@ -46,17 +46,30 @@
 
 // console.log(isPresent?'present':'not present');
 
-const array = ['1','2','3','4','5']
-searchItem = 2
-isPresent = false
+// const array = ['1','2','3','4','5']
+// searchItem = 2
+// isPresent = false
 
-for(item of array){
-    if(item == searchItem){
-        isPresent = true;
-        break;
+// for(item of array){
+//     if(item == searchItem){
+//         isPresent = true;
+//         break;
+//     }
+// }
+// console.log(isPresent ? 'present':'Not present');
+
+
+const array = ['1','2','3','4','5']
+s = 3 
+isPresent = false
+for (item of array){
+    if(item==s){
+        console.log('present')
+        isPresent = true
+        break
     }
 }
-console.log(isPresent ? 'present':'Not present');
+console.log(isPresent ? "present x": "Not present")
 
 // // input= [4.5.6]
 // // output= [11,10,9]
@@ -77,21 +90,26 @@ console.log(isPresent ? 'present':'Not present');
 //     }
 // }
 
+console.log("**********************************************")
+console.log("**********************************************")
 
 a = [10,20,30,10,20,40,50,50]
-isDuplicate = false
+isDuplicate=false
 output=[]
-for(i=0;i<=a.length-1;i++){
-    for(j=i+1;j<=a.length-1;j++){
-        if(a[i]==a[j]){
-            isDuplicate = true;
-            output.push(a[i]);
-            break;
-        }
+for(i=0 ; i<=a.length-1; i++){
+    for(j=i+1; j<=a.length-1; j++){
+          if(a[i]==a[j]){
+            isDuplicate=true
+            output.push(a[i])
+            break
+          }
     }
 }
 
-console.log(isDuplicate? output: 'No Dup Found');
+console.log(isDuplicate ? 'dupli present': 'dupli absent')
+for(x of output){
+    console.log(x)
+}
 
 // // w .a . p to print whose pair sum is 6 
 // b= [2,3,4,5]
@@ -117,23 +135,42 @@ console.log(isDuplicate? output: 'No Dup Found');
 // }
 
 
-b= [2,3,5,5] 
-pairSum= false
-pairs =0
-for(i=0;i<=b.length-1;i++){
-    for(j=i+1;j<=b.length-1;j++){
-        if(b[i]+b[j]==6){
-            pairSum=true
-            pairs++
-            console.log(`no.of pairs whose sum is 6 is ${pairs}`)
-            console.log(`respective pairs are ${b[i],b[j]}`)
+// b= [2,3,5,5] 
+// pairSum= false
+// pairs =0
+// for(i=0;i<=b.length-1;i++){
+//     for(j=i+1;j<=b.length-1;j++){
+//         if(b[i]+b[j]==6){
+//             pairSum=true
+//             pairs++
+//             console.log(`no.of pairs whose sum is 6 is ${pairs}`)
+//             console.log(`respective pairs are ${b[i],b[j]}`)
+//         }
+//     }
+//     if(pairSum==false){
+//         console.log('no pairs');
+//         break;
+//     }
+// }
+
+
+console.log('++++++++++++++++++++++++++++++++++++++++++++++++++++')
+console.log('++++++++++++++++++++++++++++++++++++++++++++++++++++')
+console.log('++++++++++++++++++++++++++++++++++++++++++++++++++++')
+
+
+b= [2,3,5,5]
+pairSum= 6
+isPresent=false 
+for(i=0; i< b.length-1; i++){
+    for(j=i+1; j< b.length; j++){
+        if(b[i]+b[j]==pairSum){
+            isPresent=true
+            console.log(`The pairs are ${b[i]} and ${b[j]}`)
         }
     }
-    if(pairSum==false){
-        console.log('no pairs');
-        break;
-    }
 }
+console.log(isPresent ? 'pair is presnt':'pair sum is absent')
 
 
 // // Truthy operator - &&
@@ -145,6 +182,10 @@ for(i=0;i<=b.length-1;i++){
 // // o/p = 11, 20, 30
 
 console.log("--------------------------------------------------------")
+
+console.log('///////////////////////////////////////////////////////////////////////')
+console.log('///////////////////////////////////////////////////////////////////////')
+console.log('///////////////////////////////////////////////////////////////////////')
 
 p=[10,11,12,20,30]
 q=[11,20,25,30,33]

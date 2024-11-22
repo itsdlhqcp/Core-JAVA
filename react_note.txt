@@ -1,0 +1,488 @@
+    
+    ---------------------------- MODULE 3 -------------------------------
+
+    REACT 
+    ------ 
+    -It is a open-source web application library 
+    - developed and maintained by facebook/ meta 
+
+    features of react 
+    ------------------
+    -to create UI
+    -create single page application (SPA) - Only page loads/reload in browser - index.html 
+    -declarative application - it will not access real DOM 
+    - Virtual DOM 
+       -Copy real dom - created by react 
+         diffing - process of comparing vdom and rdom 
+         reconcilation - updating only the node that changes
+      -reduces the loading time - entire application wont be re-loaded for each updates - website optimization.
+      - pure function: function whose output only depends on argument
+      - language - jsx - javascipt xml (combination of js, html , css)
+       transpilling - converting of jsx into browser understanding language 
+       - babel
+       - data sharing - unidirectional - parent-child - with the help of pre-defined objects called props.
+
+       HOW TO CTREATE A PROJECT 
+       --------
+
+       - Command : npx create-react-app projectname    -PORT: 3000
+       - Command : npm create vite@latest projectname  -PORT: 5173
+
+       installing node globally - npm install -g npm
+
+
+       files
+       ------
+       1) README.md - document of this application 
+       2) package.json - npm configuration -dependencies - installed libraries.
+       3) package-lock.json - installed libraries - version and some import features to run that modules in the application 
+       4) node_modules - contain the copy of the libraries installled in the application
+       5) .gitignore - files that need to ignored while pushing into git repositories.
+       6) public - contents that are available through-out the application.
+       7) app - component - js file , css file
+       8) index.css - to provide global styling 
+       9) reportWebVital.js - to check the performance of the websites .
+
+
+       component - it is the basic unit of ui 
+       Features
+       -----------
+       - component name should start with capital letter .
+       - rename is not possible
+       - extenstion be - js, jsx 
+       - javascipt code are placed above return statement 
+       - all tags inside a return function should placed inside a 
+       single tag 
+
+       - react fragment <></> 
+
+       styling 
+       --------
+       1)inline 
+       object
+       -style="property:value" font-size:'50px'
+       style={{Property:value}}
+
+       2) external 
+       - external file - with extention as .css 
+       - import the css file in the js file using 
+       import keyword 
+
+       3) css module 
+       - create an external file with extention as .module.css 
+       -to style more than one component by storing the data in a variable
+       - import the file in the particular componemnt
+       - must be created inside the src folder
+
+       js
+       ---
+       js is applied using curly braces {}
+       
+       functions 
+       ----------
+
+       -functions without argument 
+       - functionname
+         EG :- add 
+
+      - function with argument 
+       - callback
+
+       EG :- ()=>{add(arg1...argn)}
+
+
+       onClick() event used to detect changes by button 
+
+       onChange() event used to detect the change done inside the input box
+
+       events - click and change
+
+       cjange event is used to access the value from input box
+
+       object de-structuring 
+       -------------------------
+       accessing particular keys from an object 
+        syntax 
+       --------
+       {key, ...}
+
+       data sharing - unidirect = > props
+       --------------
+       parent comnponent -child tag - key={value}
+       child componemnt 
+           1) functional component = function functionalname(props){}
+           2) class component = constructor(props){
+             super(props)
+           }
+
+      
+       types of componemnts
+       -------------------
+       1) functional components   // stateless componemnt
+       syntax 
+       -------
+
+       functional functionname() {
+         // js code 
+         return(
+            //div 
+         )
+       }
+        
+        export default functionname
+
+        state 
+        ------
+
+        2) class componemnt  // stateful componemnt
+   
+       class classname {
+         // property 
+         // constructor 
+         // method 
+         methodname
+       }
+
+       // implementation 
+         export default class classname extend componemnt{
+             super(props){
+                super(props) /* to access data from parent 
+                since it is a derived class */
+             }
+            // js code 
+            render() {
+                return(
+                    // div
+                    <div>Username is {this.props.username}</div>
+                )
+            }
+         }
+
+
+         state
+         ---------
+          - state is an object which stores properties of a react class components {key: value}
+          - when value of state changes the entire component re-render 
+          - setState() - is the function to change the value of the state .
+          - this.state - is used to access the state of the component.
+
+          Life-cycle of a class component
+          --------------------------------
+          1) mounting phase - component adding to DOM
+            ------------
+          - constructor()- it initializes the state value
+          - getDerivedStateFromProps() - return object if component is having data from parent to
+            update the state , else return null 
+          - render() - renders the jsx code into the browser - it return the components the output
+          - componentDidMount() - network calls or API CALLS are done by using it
+
+          2) updating phase  - editing Component
+          --------------
+          - getDerivedStateFromProps()
+          - shouldComponentUpdate() - return true if there is updation , else false
+          - render() - render the jsx code into the browser - return component output
+          - ComponentDidUpdate()
+          - GetSnapshotBeforUpdate() - this function invokes right before the updation in vdom is reflected in rdom
+
+          3) un-mounting phase - removal of component from DOM
+          ---------------
+          - componentWilUnmount()- it is used to cleanup the component before component is removed from the DOM.
+
+          4) Error-handling phase 
+          ---------------
+             1) getDerivedStateFromError() - error ui 
+             2) componentDidCatch() - return error log 
+
+
+    HOOKS 
+    -------
+    - Functions which provides state and life cycle for a functional component in react application
+    - hooks are of two types 
+     1) pre-defined hooks 
+        - useState - inorder to create states in functional component
+        - return - state , function to change the state
+        -SYNTAX 
+         const [state, function ] = useState(initial value)
+    2) custom hooks 
+        helps to extract and re-use logic across components
+
+    Rules to use the Hooks
+    -----------------------
+    - import hooks from react library
+    - hooks are called at the top of the js parts 
+    - we cannot call the hooks based on conditional basis
+
+
+
+
+    Redux 
+    --------
+    - its an external library to achieve data sharing in react 
+    - components of redux 
+       1) store - to create state - globally accessible 
+       2) action - to do logics to update state 
+       3) reducer - only to update specific area in react 
+
+       conditional rendering 
+       ------------------------
+       --> ternary operator = { condition ? true : false}
+
+       const [sub, setSub] = useState('Reactjs)
+
+       { sub == 'React'? <h3> subject : {sub} </h3>
+       : <h3> subject is not a React </h3> }
+ 
+
+
+
+
+    
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    React.js developer 
+    --------------------
+    - React is a JavaScript library for building user interfaces.
+    - It is used to build single-page applications, using a components based architecture to create re-usable components and helps to manage states efficiently.
+
+   #  why React.js ?
+     -component based architecture, Virtual DOM (IMPROVES PERFORMANCE)
+     -JSX (JavaScript XML) (IMPROVES PERFORMANCE)
+     -Rich eco-systems, libraries and tools -allow easy debugging
+
+    # How does React code work in the background ? 
+    -React code works in background by using virtual DOM for efficiently update the actual DOM
+    -IT using a diffing algorithm to reconcile the changes .
+    -It uses  component based architecture to manage states and render UI dynamically.
+    -It uses JSX to write HTML in React code.
+    -Virtual DOM  is a light-weight, in memory representation of the Actual DOM. React uses 
+    it to efficiently updates the real DOM -(Document Object Model)
+
+   # Why React is not just JAVASCIPT ? 
+     -JavaScript alone can become more complex and in-efficient to build modern websites   and UIs.
+     -framework like react simplify the development with component based architecture,
+     virtual DOM for performance and making code more efficient and scalable.
+
+  # JSX and how it different from HTML 
+
+  -JSX is a syntax extention for javascript (that allow HTML code within javascript)
+
+
+  ==> Types of components in React.js
+       1. Functional Components : These are stateless and written as functions.
+         they use hooks for state manage and side effects
+
+             syntax :- 
+              function MyComponent(props) {
+                return <h1>Hello, {props.name}</h1>;
+              }
+      2. Class components 
+         this are stateful and written as ES6 classes. They are extended by using ES6 classes.
+
+            syntax :-
+            class MyComponent extends React.Component {
+              render() {
+                return <h1>Hello, {this.props.name}</h1>;
+            }
+            }
+
+  ==> Props and Prop-Types in react 
+
+     -Props are input to React components, passsed from parent to child, allowing data and functions to be shared. 
+     -Prop-type is a library for type-checking props, ensuring the correct data types are recived.
+
+  ==> States in React 
+    
+    -States in React are build-in objects used to manage component data over time.
+    -It allow component to create and maintain their own dynamic data can be upadted   using  `set-state`
+
+  ==> React Event handlers 
+   -In React event handlers used to handle the events attached to JSX Components
+   -EVENT HANDLERS UPDATES THE STATES OF THE components that can be used to update the 
+    states of the components - which trigger and render parts
+
+  ==> Toogle mode in React
+
+    Toogle-mode helps to manage the states with a boolean flag
+
+  ==> React Router 
+   -React router helps in the navigation of single-page applications.
+   -helps in tghe rendering of the components based on URL 
+
+  ==> sync or async 
+
+   -It is used in handling asynchronous operations
+
+  ==> ComponentDidMount in REACT 
+
+   -`ComponentDidMount` is a lifecycle method in react that runs once after a 
+    component is mounted, ideal with data fetching
+
+  ==> React life-cycle method 
+
+   -React lifecycle method manages the component stages :- 
+      which consist of proccess of mounting, updating and un-mounting
+
+  ==> React hooks
+
+   -React hooks are functions that let you use state and other react features in functional  components in react lifecycle
+   -key hooks include
+       useState - for state management 
+       useEffect - for side effects
+       useContext - for context management 
+       useReducer - for state management
+       useMemo - memorize expensive calculations 
+       useCallback - memorize expensive functions
+
+ ==> How to converting class based to functional based components ? 
+    
+    -Involves replacing lifecycle methods with hooks, primarily useEffect for managing side effects. 
+
+    Node.js 
+    ---------
+    -Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+    -it will enable server-side scripting, scalable and event-driven applications.
+
+    Express.js 
+    ----------
+    -Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features and middleware support. 
+
+      
+
+      Life Cycle of the class component 
+      ----------------------------------
+      1) mounting phase - component adding to DOM 
+        ---------------
+        -constructor() - it initialize the state value 
+        -getDerivedStateFromProps() - return object if component is having any data from parents 
+        -render() - render jsx code into browser - returns the component output 
+        -componentDidMount() - network call (api) 
+
+
+        2) updating phase - editing component 
+          --------------- 
+          -getDerivedStateFromProps()-return object if the component is having any data from parent to update the state 
+          -shouldComponentUpdate()- return boolean value  true - if there is updation , else false 
+          -render()

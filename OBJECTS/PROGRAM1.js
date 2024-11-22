@@ -14,6 +14,7 @@ employee = {id:1000, name:'noel', desgn:'developer',loc:'kochi',sal:25000,exp:3}
 //display 
 
 console.log(employee)
+console.log(a[1]);
 // Array accesssing
 console.log(a[1]);
 // Object accessing

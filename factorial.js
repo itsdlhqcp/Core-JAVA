@@ -13,37 +13,55 @@
 // cu  --   1 8 27 64 ... 
 // write a program to print wheather a number is armstrong or not 
 
-num = 153
-digit=0
+// num = 153
+// digit=0
+// orgNum = num 
+// res = 0 
+// while(num!=0){
+//     digit = num % 10;
+//     res += Math.pow(digit,3);
+//     num = Math.floor(num /10);
+// }
+// if(res == orgNum){
+//     console.log("It is armstrong number");
+// }
+
+
+num =1532
+res=0
 orgNum = num 
-res = 0 
+digit=0
+
 while(num!=0){
     digit = num % 10;
     res += Math.pow(digit,3);
-    num = Math.floor(num /10);
+    num=Math.floor(num/10);
 }
-if(res == orgNum){
-    console.log("It is armstrong number");
+if(res==orgNum){
+    console.log('Its is armstrong')
+}else{
+    console.log('it not')
 }
 
 
 console.log("----------------------------")
+console.log("----------------------------")
 
-num=153 
-digit = 0
-orgNum = num 
-res = 0
-while(num != 0){
-    digit = num % 10;
-    res += Math.pow(digit, 3);
-    num = Math.floor(num / 10)
-}
+// num=153 
+// digit = 0
+// orgNum = num 
+// res = 0
+// while(num != 0){
+//     digit = num % 10;
+//     res += Math.pow(digit, 3);
+//     num = Math.floor(num / 10)
+// }
 
-if(res === orgNum){
-    console.log("It is armstrong number");
-}else{
-    console.log("It is not armstrong number");
-}
+// if(res === orgNum){
+//     console.log("It is armstrong number");
+// }else{
+//     console.log("It is not armstrong number");
+// }
 
 
 // // -----------------------------------

@@ -29,9 +29,8 @@ class Bank {
     //     console.log('invalid');
     //    }
     }
-   
-  
 
+   
     authenticate(acno, pswd) {
         if (this.validate(acno)) {
             if (this.accountDetails[acno].password == pswd) {
@@ -80,7 +79,6 @@ class Bank {
             console.log("Invalid account details");
         }
     }
-    
 
 }
 

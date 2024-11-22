@@ -53,77 +53,135 @@ accounts=[
     }
 ]
 
-//1. total number of accounts
+// total number of accounts 
 
-console.log(`Account length is ${accounts.length}`)
-console.log("---------------------------------------")
+console.log(`Acoount length is  ${accounts.length}`);
+console.log("*******************************************");
 
-//2. print account number whose ac_type is savings
+// //1. total number of accounts
 
+// console.log(`Account length is ${accounts.length}`)
+// console.log("---------------------------------------")
+
+// //2. print account number whose ac_type is savings
+
+// accounts.forEach(account => {
+//     if(account.ac_type === 'savings'){
+//         console.log(account.acno)
+//     }
+// })
+console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 accounts.forEach(account => {
-    if(account.ac_type === 'savings'){
-        console.log(account.acno)
+    if(account.acc_type === 'savings'){
+        console.log(account.acno);
     }
 })
 
-accounts.forEach(account =>{
-    if(account.ac_type === 'savings'){
-        console.log(account.acno)
-    }
-})
+// accounts.forEach(account =>{
+//     if(account.ac_type === 'savings'){
+//         console.log(account.acno)
+//     }
+// })
 
-//3.print the balance of accnount number 1000
+// //3.print the balance of accnount number 1000
 
+// accounts.forEach(account => {
+//     if(account.acno === 1000){
+//         console.log(account.balance)
+//     }
+// })
+console.log("#$######################################")
 accounts.forEach(account => {
     if(account.acno === 1000){
-        console.log(account.balance)
+        console.log(account.balance);
     }
 })
 
-//4. print all gpay transactions
+// //4. print all gpay transactions
+
+// accounts.forEach(account =>{
+//     console.log(account.transaction)
+// })
+console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
 accounts.forEach(account =>{
-    console.log(account.transaction)
+    console.log(account.balance);
 })
 
-console.log("------------------------------------")
-//5. print all transaction whose amount > 5000
-
+// console.log("------------------------------------")
+// //5. print all transaction whose amount > 5000
+console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 accounts.forEach(account => {
     if(account.balance > 5000){
-        console.log(account.transaction)
+        console.log(account.transaction);
     }
 })
 
-//6. print credit transaction of account 1002
+// accounts.forEach(account => {
+//     if(account.balance > 5000){
+//         console.log(account.transaction)
+//     }
+// })
 
-credita = accounts.map((data)=>data.transaction).flat().filter((item)=>item.to==1002)
-console.log(credita)
+// //6. print credit transaction of account 1002
 
-//7. print debit transaction of account 1002
-console.log("------------------------------------------")
+// credita = accounts.map((data)=>data.transaction).flat().filter((item)=>item.to==1002)
+// console.log(credita)
 
-debita = accounts.find((ac)=>ac.acno==1002).transaction
-console.log(debita)
+console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
-//8. print transaction history of 1002 
+credita = accounts.map((data)=>data.transaction).flat().filter((item)=>item.to ==1002);
+console.log(credita);
 
-tranHis = {
-    credit: credita,
-    debit : debita
+// //7. print debit transaction of account 1002
+// console.log("------------------------------------------")
+
+// debita = accounts.find((ac)=>ac.acno==1002).transaction
+// console.log(debita)
+
+debita = accounts.find((ac)=>ac.acno == 1002).transaction
+console.log(debita);
+
+console.log("*****************************************************");
+debita = accounts.find((ac)=> ac.acno == 1002).transaction
+console.log(debita);
+
+// //8. print transaction history of 1002 
+
+// tranHis = {
+//     credit: credita,
+//     debit : debita
+// }
+// console.log("-------------------------")
+// console.log(tranHis)
+console.log("------------------------------------------");
+transHis = {
+      credit: credita,
+      debit: debita
 }
-console.log("-------------------------")
-console.log(tranHis)
+console.log(transHis);
 
-//print highest balence account details
+// //print highest balence account details
 
-highest = accounts.map((item)=>item.balance).reduce((a,b)=>a>b?a:b)
-console.log(highest)
+// highest = accounts.map((item)=>item.balance).reduce((a,b)=>a>b?a:b)
+// console.log(highest)
+console.log("88888888888888888888888888888888888888888888888888")
+highest = accounts.map((item)=> item.balance).reduce((a,b)=>a>b?a:b);
+console.log(highest);
 
-highest = accounts.map((item)=>item.balance).reduce((a,b)=>a>b?a:b)
-console.log(accounts.find((item)=>item.balance==highest));
+console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+highest = accounts.map((item)=>item.balance).reduce((a,b)=>a>b?a:b);
+console.log(highest);
 
-console.log("-------------------------------")
+// highest = accounts.map((item)=>item.balance).reduce((a,b)=>a>b?a:b)
+// console.log(accounts.find((item)=>item.balance==highest));
 
-h=accounts.reduce((a1,a2)=>a1.balance>a2.balance?a1:a2)
-console.log(h)
+// console.log("-------------------------------")
+
+// h=accounts.reduce((a1,a2)=>a1.balance>a2.balance?a1:a2)
+// console.log(h)
+console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+h=accounts.reduce((a1,a2)=>a1.balance>a2.balance?a1:a2);
+console.log(h);

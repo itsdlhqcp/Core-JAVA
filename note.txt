@@ -83,7 +83,6 @@ Code editors -
 VSC CODE
 SUBLIME TEXT EDITOR
 
-
 HTML5
 
 <img src=” ” alt=” “ height=” “ width=” “ />
@@ -925,12 +924,12 @@ if key is a variable
   -----------------------
   - A programming paradigm that focuses on procedures or steps to be executed to achieve a specific goal.
   - unlike oops, where data and methods are tied together (encapsulated) in an classs or object, procedural  programming
-  which uses data and methods as different entity 
+  which uses data and methods as different entity   [[ ENCAPSULATION in OOPS]]
 
 
   // Object oriented programming 
   ---------------------------------------
-  - Single variable which can store more than one data of different datatype that are stored as key value pair which can be enclsed in curly braces 
+  - Single variable which can store more than one data of different datatype that are stored as key value pair which can be enclosed in curly braces 
   - it can provide more clarity to data than other data type
 
 
@@ -997,15 +996,18 @@ if key is a variable
        const objname = new classname()
 
 
+####################################################################################
+
    PILLERS OF OOPS 
    ---------------------
    1) Inheriatance
-   2) polymorphiusm
+   2) polymorphism
    3) encapsulation 
    4) abstrtaction 
 
    Inheritance 
    -------------
+   Allows  a class to inherits properties and behavior from other class.
     -It is used to access methods and properties from one class to another
     - parent class / super class / base class 
     - child class / sub class / derived class 
@@ -1018,6 +1020,7 @@ if key is a variable
 
     polymorphiusm
     ----------------
+    Allows a single interface to be used for multiple data types
     poly - many 
     morph - forms 
 
@@ -1028,6 +1031,17 @@ if key is a variable
     2) method overriding 
       - method with same name and same of arguments 
       - execute the last written method 
+
+      Abstraction iN OOPS 
+      -----------------
+      Hiding the internal details of an application from the external world
+  
+       Encapsulation in OOPS 
+       ------------------ 
+       Building data and methods into a single group.
+
+
+####################################################################################
 
 
       Exception Handling 
@@ -1498,7 +1512,7 @@ if key is a variable
 
       if a function component 
       has constructor then props be called inside the 
-      copnstructor 
+      constructor 
 
       eg :- export default class Random extends Cpmponent{
         /* to accesss data from the derived class */
@@ -1515,7 +1529,7 @@ if key is a variable
             }
           }
 
-     DAT-Sharing in Componenst uni-directional data ==> props 
+     DATA-Sharing in Components uni-directional data ==> props 
      ------------------------------
 
        1) functional component = function functionalname(props){}
@@ -1524,10 +1538,9 @@ if key is a variable
        }
 
       
-       
        STATE 
        ------------
-       -STATE IS A LOCAL VARIABLE OF A COMPONENT
+      - STATE IS A LOCAL VARIABLE OF A COMPONENT
       - state is an object which store properties of a react class component {key:value}
       - when the state changes its value the entire component re-render 
       - setState() - is the function used to change value of the state .
@@ -1550,7 +1563,6 @@ if key is a variable
           -GetSnapshotBeforUpdate() - this function invokes right before the updation in vdom is reflected to rdom 
           -shouldComponentUpdate() - returns a boolean value true - if there is updation else false 
           -render() - renders the jsx code into browser - returns components output
-          -getSnapShotBeforeUpdate()- this function invokes right before the updation in vdom reflected in rdom 
           -ComponentDidMount() - after DOM is updated  now handle side effects effects 
 
       3) unmounting Phase - removal of component from DOM 
@@ -1591,9 +1603,72 @@ if key is a variable
             </>
           )
          }
+  
+     conditional rendering 
+     ------------------------ 
+     ternary operator = { condition? true : false }
+     truthy operator = { condition && true }
+
+     for building app faster----
+     -----------------------
+     we use --> npm create vite@latest simpleintrest 
+
+     Material UI in react (LIKE BOOTSTRAP)
+     -----------------------
+     go to React Material UI WEBSITE
+     best library in react were components can be easily added to app
+     npm install @material-ui/core @material-ui........
+
+      // regular expression 
+      Used to find pattern of a given string 
+      RULES IN RG are :- 
+      // start with ^ 
+      // end with $ 
+      // in pattern inside the sqare bracket 
+
+      // the match() expression check wheather it returm a regular expression 
+         and then  return a string
 
 
+         Redux 
+         --------
+         -it is external library which is used 
+          for data sharing in react 
+          -components of react are 
+           1) store - to create state - globally accessible -configureStore()
+           2) action - to do logics to update state - createAction()
+           3) reducer - only component which update the state in  - createReducer()
+                         the store 
 
+          redux toolkit 
+          --------------
+          action and reduce kept in singke component as slice - createSlice()
+
+          advantage
+          ----------- 
+          1) easy configure store 
+          2) reduces installation of large amount of packets 
+          3) eliminate boilerplate code (repeated code)
+
+          steps 
+          ------
+          1) install redux toolkit 
+               commands :- npm install react-redux 
+           2) npm install @reduxjs/toolkit
+           2) CREATE slice using creatSlice method which return both
+             action and reducer automatically 
+            3) export actions and reducers sepereately since action is needed
+              for the components and reducer is needed for a store 
+            4) create store using configure store method 
+            5) place the reducer in the reducer key 
+            6) make the state in the store globally accessible
+            by wrapping in the app component() (root comnponent inside the 
+            provided tag.)
+            7) usedispatch to call action
+            8) useSelector hook is used to access the state .
+            
+              
+          
 
 
 
@@ -1933,116 +2008,35 @@ Angular.Js Interview questions:-
       
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Next.js 
+      -------------
+      - Next.js is a popular React-based framework for building server-side rendered (SSR)
+      - npm install -g pnpm (package manager in nextjs) - as it is faster and more efficient 
+      - nextjs is used for building server side rendered application, static site generation and get static site
+      - command to start a next.js app - npm run dev 
+      - npm install -g pnpm (more efficient)
+      - npx create-next-app@latest
+      - /app: contains all routes, components and the logics
+
+
   
 
 
 
 
-
-    React.js developer 
-    --------------------
-    - React is a JavaScript library for building user interfaces.
-    - It is used to build single-page applications, using a components based architecture to create re-usable components and helps to manage states efficiently.
-
-   #  why React.js ?
-     -component based architecture, Virtual DOM (IMPROVES PERFORMANCE)
-     -JSX (JavaScript XML) (IMPROVES PERFORMANCE)
-     -Rich eco-systems, libraries and tools -allow easy debugging
-
-    # How does React code work in the background ? 
-    -React code works in background by using virtual DOM for efficiently update the actual DOM
-    -IT using a diffing algorithm to reconcile the changes .
-    -It uses  component based architecture to manage states and render UI dynamically.
-    -It uses JSX to write HTML in React code.
-    -Virtual DOM  is a light-weight, in memory representation of the Actual DOM. React uses 
-    it to efficiently updates the real DOM -(Document Object Model)
-
-   # Why React is not just JAVASCIPT ? 
-     -JavaScript alone can become more complex and in-efficient to build modern websites   and UIs.
-     -framework like react simplify the development with component based architecture,
-     virtual DOM for performance and making code more efficient and scalable.
-
-  # JSX and how it different from HTML 
-
-  -JSX is a syntax extention for javascript (that allow HTML code within javascript)
-
-
-  ==> Types of components in React.js
-       1. Functional Components : These are stateless and written as functions.
-         they use hooks for state manage and side effects
-
-             syntax :- 
-              function MyComponent(props) {
-                return <h1>Hello, {props.name}</h1>;
-              }
-      2. Class components 
-         this are stateful and written as ES6 classes. They are extended by using ES6 classes.
-
-            syntax :-
-            class MyComponent extends React.Component {
-              render() {
-                return <h1>Hello, {this.props.name}</h1>;
-            }
-            }
-
-  ==> Props and Prop-Types in react 
-
-     -Props are input to React components, passsed from parent to child, allowing data and functions to be shared. 
-     -Prop-type is a library for type-checking props, ensuring the correct data types are recived.
-
-  ==> States in React 
-    
-    -States in React are build-in objects used to manage component data over time.
-    -It allow component to create and maintain their own dynamic data can be upadted   using  `set-state`
-
-  ==> React Event handlers 
-   -In React event handlers used to handle the events attached to JSX Components
-   -EVENT HANDLERS UPDATES THE STATES OF THE components that can be used to update the 
-    states of the components - which trigger and render parts
-
-  ==> Toogle mode in React
-
-    Toogle-mode helps to manage the states with a boolean flag
-
-  ==> React Router 
-   -React router helps in the navigation of single-page applications.
-   -helps in tghe rendering of the components based on URL 
-
-  ==> sync or async 
-
-   -It is used in handling asynchronous operations
-
-  ==> ComponentDidMount in REACT 
-
-   -`ComponentDidMount` is a lifecycle method in react that runs once after a 
-    component is mounted, ideal with data fetching
-
-  ==> React life-cycle method 
-
-   -React lifecycle method manages the component stages :- 
-      which consist of proccess of mounting, updating and un-mounting
-
-  ==> React hooks
-
-   -React hooks are functions that let you use state and other react features in functional  components in react lifecycle
-   -key hooks include
-       useState - for state management 
-       useEffect - for side effects
-       useContext - for context management 
-       useReducer - for state management
-       useMemo - memorize expensive calculations 
-       useCallback - memorize expensive functions
-
- ==> How to converting class based to functional based components ? 
-    
-    -Involves replacing lifecycle methods with hooks, primarily useEffect for managing side effects. 
-
-    Node.js 
-    ---------
-    -Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
-    -it will enable server-side scripting, scalable and event-driven applications.
-
-    Express.js 
-    ----------
-    -Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features and middleware support. 
 

@@ -2,7 +2,6 @@
 // y = 8 
 // console.log(`x and y are equal: `)
 
-
 isPalindrome=true 
 input = 'ooooooa'
 x=input.split('')
@@ -20,6 +19,9 @@ while(a<b){
 }
 
 console.log(isPalindrome ? 'string is palindrome': 'not')
+
+
+console.log('*****************************************************')
 
 
 //    *
