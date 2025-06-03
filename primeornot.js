@@ -1,18 +1,33 @@
-flag=1
-num=4
-if (num == 1) {
-    console.log('neither prime nor composite');
-}
-else {
-    for(i=2;i<num;i++){  //2<4, 3<4
-        if(num%i==0){  //4%2=0 , 4%3
-            flag=0
-            break
-        }
-    }
-    console.log(flag == 1 ? 'prime' : 'not prime');
+// flag=1
+// num=4
+// if (num == 1) {
+//     console.log('neither prime nor composite');
+// }
+// else {
+//     for(i=2;i<num;i++){  //2<4, 3<4
+//         if(num%i==0){  //4%2=0 , 4%3
+//             flag=0
+//             break
+//         }
+//     }
+//     console.log(flag == 1 ? 'prime' : 'not prime');
+// }
 
-}
+
+// num=7
+// flag = 0
+// if(num==1){
+//     console.log('neither prime nor composite')
+// }else{
+//     for(i=2;i<num;i++){
+//         if(num%i==0){
+//             flag=1 
+//             break
+//         }
+//         }
+//         console.log(flag == 0 ? 'prime' : 'not prime')
+//     }
+
 
 
 //1,2 3 4 5 6 7 8 9 10 ...... 50
@@ -39,11 +54,22 @@ else {
 
 // W A P TO FIND GCD AND HCD OF 2 EVEN NUMBERS 
 
+// num1 = 12
+// num2 = 24 
+// gcd=1
+// for (i=1; i<=12 && i<=24; i++){
+//     if (num1%i==0 && num2%i==0){
+//         gcd=i
+//     }
+// }
+// console.log(gcd)
+
+// W A P TO FIND GCD AND HCD OF 2 EVEN NUMBERS 
 num1 = 12
 num2 = 24 
-gcd=1
-for (i=1; i<=12 && i<=24; i++){
-    if (num1%i==0 && num2%i==0){
+gcd=1 
+for(i=1; i<=num1 && i<=num2; i++){
+    if(num1%i==0 && num2%i==0){
         gcd=i
     }
 }

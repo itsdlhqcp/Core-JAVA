@@ -20,6 +20,73 @@ mv :- Moves files
 rm :- Remove files
 rmdir :- Remove directories
 
+File and Directory Viewing :-
+
+cat – View contents of a file.
+more / less – View file contents one screen at a time (less is more advanced).
+head – Show the first 10 lines of a file.
+tail – Show the last 10 lines of a file (useful with -f to monitor logs).
+tree – Display directory structure as a tree (if installed).
+
+File and Text Manipulation :-
+
+echo – Display a line of text or variable value.
+nano, vi, or vim – Command-line text editors.
+grep – Search inside files for a pattern.
+find – Search for files and directories.
+wc – Word/line/character count in a file.
+cut – Extract sections from lines of text.
+sort – Sort lines in a file.
+uniq – Remove duplicate lines.
+diff – Compare the differences between two files.
+chmod – Change file permissions.
+chown – Change file ownership.
+
+Package Management :-
+
+apt update – Refresh package index.
+apt upgrade – Upgrade installed packages.
+apt install <package> – Install a new package.
+apt remove <package> – Remove a package.
+
+System Monitoring & Info :-
+
+top / htop – Show system resource usage (CPU, memory, etc).
+df -h – Show disk space usage.
+du -sh <dir> – Show space used by a directory.
+free -h – Show memory usage.
+uname -a – Show system information.
+whoami – Show current logged-in user.
+ps aux – List all running processes.
+kill <PID> – Kill a process by PID.
+uptime – Show how long the system has been running.
+
+Networking :-
+
+ping <host> – Test connectivity.
+ifconfig or ip addr – Show network interfaces.
+netstat -tuln – Show open ports and services.
+curl <url> – Fetch data from a URL.
+wget <url> – Download files from the web.
+ssh <user@host> – Connect to another machine via SSH.
+scp – Secure copy files between systems.
+
+Compression and Archiving :-
+
+tar -cvf archive.tar file1 file2 – Create an archive.
+tar -xvf archive.tar – Extract an archive.
+gzip / gunzip – Compress/decompress files.
+zip / unzip – Create or extract ZIP files.
+
+others :-
+
+history – Show previously used commands.
+alias – Create command shortcuts.
+clear – Clear the terminal screen.
+man <command> – View manual for a command.
+exit – Exit the terminal session.
+
+
 -------------------------------------------------------------------------------
 
 
@@ -1285,33 +1352,147 @@ if key is a variable
                       }
                   }
 
+############################################################################################################################
+********************************************************************************************
+********************************************************************************************
+
+JavaScript - JS IN FRONTEND
+-----------------
+-It is a programming language used to implement functionalities
+-It is a scripting language used to implement functionalities
+-It is a light-weight language used to implement functionalities
+
+- BROWSER -
+it is an application program that provide interface to interact with the information(resources)
+available on the world wide web (www).
+
+Browser Engine - html css javascript 
+
+v8 engine - it is a JavaScript engine developed by Google
+
+- javascipt - directly - DOM
+
+DOM - Document Object Model -- tree structure of HTML document created by browser
+Tree-like structure of nodes, where each node can represent an HTML element
+It represents the page so that programs can change the document structure, style, and content
+
+Different ways to link js code :-
+
+linking with the HTML code -
+internal js 
+ script - logic
+  -head and after body - prefer - after body 
+external js
+ - create a seperate file with extention as filename.js  
+ - script tag is used to connect the external file with the html
 
 
+ how to access tag in html
+ -------------------------
+ -1) document.getElementByTagname('tagname') - 
+   return an array(htmlcollection) -all specified tags
+ 
+ -2) document.getElementById() - return directly the Tag
+ 
+ -3) document.getElementByClassname() - return htmlcollection
+   which contain tag with same classname
+ 
+ -4) document.querySelector()
+   - #- id 
+   - . - class 
+   - return directly  the first tag 
+ 
+ -5) document.querySelectorAll()
+   - it return nodelist(array) with all tags 
+
+   eg :- htmljs.html will gives the example implementation
+ 
+ ------------------
+ to access the content from the element -
+ .innerHTML
+
+ ex :-   const res = document.getElementById('dom');
+         res.innerHTML = 'Hello World';
+         res.style.color = 'red';
+         res.style.fontSize = '20px';
+
+in meta tag charecter utf tag
+charset="utf-8"&gt; tag is a crucial part of HTML, specifying the character encoding for a webpage. 
+It ensures that the browser correctly interprets and displays characters, especially
+ those outside the basic ASCII range like emojis and accented letters. 
+
+basic html structure :-
+<!DOCTYPE html>
+<html lang="en>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My First Webpage</title>
+<meta src="styles.css"></meta>
+</head>
+<body>
+  <h1>Hello World</h1>
+  <scrip src="script.js></scrip>
+</body>
+</html>
+
+Events
+-------
+- It is the actions performed by the user which leads to an update in DOM structure
+eg :- Click , change , keyload , submit , load
 
 
+EG where I am adding a function for an html change :-
 
+rendering :-
+  <button onclick="change()">Change DOM</button>
 
+inside script :-
 
+  function change(){
+    const res = document.getElementById('dom');
+    res.innerHTML = 'Hello World';
+    res.style.color = 'red';
+    res.style.fontSize = '20px';
+   }
 
+   BOM -Browser Object Model
+   ----
+   allows developers to interact with the browser and its environment beyond just the webpage content
 
-
-
-
-
-
-
-
-
-
-
+   Date() - is a pre-defined class to access the date and time of system 
 
    
 
 
 
 
-        
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1735,6 +1916,69 @@ if key is a variable
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
       Angular.js
       -----------------
       -Command to create a new angular project :- 
@@ -1944,18 +2188,6 @@ Angular.Js Interview questions:-
             19) What are Controllers ? 
              Control data of angular applications.
               
-          
-
-            
-        
-           
-
-
-
-           
-            
-        
-    
          
 
     SPRING-BOOT 
@@ -2005,23 +2237,7 @@ Angular.Js Interview questions:-
 
       
       
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
       Next.js 
       -------------

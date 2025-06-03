@@ -97,7 +97,7 @@
 
        events - click and change
 
-       cjange event is used to access the value from input box
+       change event is used to access the value from input box
 
        object de-structuring 
        -------------------------
@@ -108,7 +108,7 @@
 
        data sharing - unidirect = > props
        --------------
-       parent comnponent -child tag - key={value}
+       parent component -child tag - key={value}
        child componemnt 
            1) functional component = function functionalname(props){}
            2) class component = constructor(props){
@@ -211,7 +211,6 @@
     - import hooks from react library
     - hooks are called at the top of the js parts 
     - we cannot call the hooks based on conditional basis
-
 
 
 

@@ -72,10 +72,10 @@ for(data of weatherData){
         }else{
             wc[dis]=currtemp
         }
-    }
+    }   
     else{
         wc[dis]=currtemp
-    }
+    }  
 }
 console.log(wc)
 //output: {Thrissur:32, Kottayam:30,Palakkad:34,Ernakulam:33}

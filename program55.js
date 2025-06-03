@@ -10,139 +10,18 @@ products=[
 ]
 //1. display all product name
 
-// for(pname of products){
-//     console.log(pname[1])
-// }
-
 products.forEach((item)=>console.log(item[1]))
 
 // //2. display product whose price < Rs.50
-// for(pname of products){
-//     if(pname[2]<50){
-//         console.log(pname[1])
-//     }
-// }  
-console.log("***********************")
-products.filter((pro)=>pro[2]>50).forEach((item)=>console.log(item[1]))
 
-// products.filter((pro)=>pro[2]<50).forEach((item)=>console.log(item[1]))
+b= products.find((pr)=>pr[1]=='oreo')
+console.log(b[2]);
 
-// //3. print price of oreo
-// for(pname of products){
-//     if(pname[1]== 'oreo'){
-//         console.log(pname[2])
-//     }
-// }
+console.log("-------------------------------------")
+v = products.find((pr)=>pr[1]=='lays');
+console.log(v[2]);
+//print the price of oreo
+console.log("*********************************");
 
-// for(pname of products){
-//     if(pname[1]=='oreo'){
-//         console.log(pname[2])
-//     }
-// }
-
-b = products.find((pr)=>pr[1]=='oreo')
-console.log(b[2])
-
-// b= products.find((pr)=>pr[1]=='oreo')
-// console.log(b[2]);
-
-
-console.log("-----------------------------------")
-br = products.find((pr)=>pr[1]=='oreo')
-console.log(br[2])
-// //4. print costly product name
-// max=0
-// for(pname of products){
-//     if(pname[2]>max){
-//         max=pname[2]
-//     }
-// }
-// for(pname of products){
-//     if(max==pname[2]){
-//        console.log(pname)
-//     }
-// }
-
-console.log("-----------------------------------")
-// max=0
-// for(pname of products ){
-//     if(max==pname[2]){
-//         console.log(pname)
-//     }
-// }
-
-array = products.reduce((a1, a2)=>a1[2]>a2[2] ?a1 : a2)
-console.log(array[1])
-
-// array = products.reduce((a1,a2)=>a1[2]>a2[1]?a1:a2)
-// console.log(array[1]);
-// //5. display out of stock product
-// console.log('-------------------------------------------');
-
-// for(pname of products){
-//     if(pname[3]==0){
-//        console.log(pname)
-//     }
-// }
-
-// products.filter((item)=>item[3]==0).forEach((item)=>console.log(item[1]))
-// //6. sort products based on stock in decsending order
-
-// console.log('-------------------------------------------');
-
-decreasinhOrder = products.sort((prod1,prod2)=>prod2[3]-prod1[3])
-console.log(decreasinhOrder)
-
-// decreasingOrder = products.sort((prod1,prod2)=>prod2[3]-prod1[3])
-// console.log(decreasingOrder)
-// //7. print product having maximum available stock
-
-// console.log('-------------------------------------------');
-
-// maxStock = products.reduce((prod1,prod2)=>prod2[3]>prod1[3]?prod1:prod2)
-// console.log(maxStock)
-console.log("------------------------------")
-
-maxStock = products.reduce((prod1,prod2)=>prod1[3]>prod2[3]?prod1:prod2)
-console.log(maxStock)
-
-console.log("-----------------------------------------")
-
-byTen = products.find((prod)=>prod[2]=='10')
-console.log(byTen? `Which can be brought at 10 is ${byTen}`: 'Not available')
-
-
-// //8. is there any product can be purchased by Rs. 10
-
-// console.log('-------------------------------------------');
-// // Laisha=employee.find((emp)=>emp[1]=='Laisha')
-// // console.log(Laisha)
-
-lsi = products.find((lai)=>lai[1]=='tiger')
-console.log(lsi ? `prod is ${lsi}`: 'not-available')
-
-// // check=false
-// // byTen = products.find((prod)=>prod[2]==10)
-// // check=true
-// // console.log(check?byTen:'element not available')
-
-// b=products.some((item)=>item[2]<=10)
-// console.log(b?'yes':'no');
-// console.log('-------------------------------------------');
-
-console.log("----------------------------------------")
-b = products.some((item)=>item[2]<=10)
-console.log(b? "yes":"No")
-// //9. Is there any product in the range of 10 to 30
-
-
-// k=products.some((item)=>item[2]>=10&&item[2]<=30)
-// console.log(k?'yes':'no');
-
-// //10. print all products in the range of 10 to 30
-
-// l = products.filter((item)=>item[2]>=10 && item[2]<=30).forEach((item)=>console.log(item[1]))
-// console.log(l)
-console.log("***************************************")
-l = products.filter((item)=>item[2]>10 && item[2]<30).forEach((item)=>console.log(item[1]))
-console.log(l)
+br = products.reduce((p1,p2)=>p1[2]>p2[2]? p1:p2)
+console.log(br[2]);

@@ -43,17 +43,33 @@
 // console.log(input === temp? 'is pali': 'Not pali')
 
 
-input = 11
-temp = input 
-id = 0
-rem = 0 
-while(input>0){
-    id=  input % 10
-    rem += Math.pow(id, 3)
-    input = Math.floor(input/10)
-}
+// psuedo code 
 
-console.log(rem === temp ? "is armstrong" : "not armstrong")
+//if number is greater than 0   /// all num graeter than zero
+// res = 0
+// id =0
+// number = 12321
+// temp = number
+
+// while(number>0)
+// id = number % 10
+// res = res + Math.pow(id, 3)
+// number = Math.floor(number / 10)
+
+// console.log(res === temp ? "is armstrong" : "not armstrong")
+
+
+// input = 11
+// temp = input 
+// id = 0
+// rem = 0 
+// while(input>0){
+//     id=  input % 10
+//     rem += Math.pow(id, 3)
+//     input = Math.floor(input/10)
+// }
+
+// console.log(rem === temp ? "is armstrong" : "not armstrong")
 
 
 // input = 12321
@@ -80,7 +96,21 @@ console.log(rem === temp ? "is armstrong" : "not armstrong")
 
 // console.log(input === temp? 'is pali': 'Not pali')
 
-input = 1232133
+// input = 1232133
+// temp = input;
+// sum = 0;
+
+// while (input > 0) {
+//     digit = input % 10;
+//     sum = (sum * 10) + digit;
+//     input = Math.floor(input / 10);
+// }
+
+// console.log(sum === temp ? 'Palindrome' : 'Not Palindrome');
+
+console.log('------------------------------')
+
+input = 12321
 temp = input;
 sum = 0;
 
@@ -91,3 +121,9 @@ while (input > 0) {
 }
 
 console.log(sum === temp ? 'Palindrome' : 'Not Palindrome');
+
+// while (num > 0) {
+//    digit = num % 10;
+//    res = (res * 10) + digit;
+//    num = Math.floor(num / 10);
+// }

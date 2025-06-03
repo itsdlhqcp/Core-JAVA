@@ -1,38 +1,25 @@
-weekdays=['mon','tue','wed']
-console.log(weekdays.length);
-console.log(weekdays[0]);
-console.log(weekdays[weekdays.length-1]);
+weekends = ['Sunday', 'Saturday', 'Friday'] 
+console.log(weekends[weekends.length-1])
+weekends.push('exday');
+console.log(weekends)
+weekends.pop();
+console.log(weekends)
+weekends.pop();
+console.log(weekends)
+weekends.shift();
+console.log(weekends)
 
-// // w.a.p to add thursday to the given array 
-weekdays.push('thu');
-console.log(weekdays);
+// **********************
 
-// // w.a.p to add sundayday to the given array 
-weekdays.push('sun');
-console.log(weekdays);
+fruits = ['Apple', 'Orange', 'Banana', 'Mango'] 
+console.log(fruits[fruits.length-1])
+console.log(fruits)
 
-// //--------------------------
 
-// poping elements
-weekdays.pop()
-console.log(weekdays);
+console.log("**********************************************")
 
-weekdays.push(3)
-console.log(weekdays);
-
-// weekdays.shift()
-// console.log(weekdays);
-
-// shift operator helps to remove the fisrt element
-weekdays.shift()
-console.log(weekdays);
-//  // w.a.p to print all items in an array 
-//  fruit= ['Apple','Orrange','Kiwi','Pine-Apple']
-
-console.log("-------------------------------------")
-
-fruit = ['Apple','Orrange','Kiwi','Pine-Apple']
-
-for (i=0; i<fruit.length; i++){
-  console.log(fruit[i])
+for (i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
 }
+
+// **********************

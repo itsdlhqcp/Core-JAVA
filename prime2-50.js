@@ -41,16 +41,34 @@ console.log("-------------------------------------------")
 
 
 // W . A .P TO CHECK NUM IS PRIME OR NOT 
-num =8
-flag = 1
-if(num==1){
-    console.log('neither prime nor composite')
+// num =8
+// flag = 1
+// if(num==1){
+//     console.log('neither prime nor composite')
+// }else{
+//     for(i=2;i<num;i++){
+//         flag=0
+//         break
+//     }
+//     if(num>1 && flag==1){        console.log('it is prime num')
+//     }else{
+//         console.log('it is composite num')
+//     }
+// }
+
+num =6
+flag = 0
+
+if(num == 1){
+   console.log('neither prime nor composite')
 }else{
     for(i=2;i<num;i++){
-        flag=0
+       if(num%i==0){
+        flag=1 
         break
+       }
     }
-    if(num>1 && flag==1){
+    if(num>1 && flag==0){
         console.log('it is prime num')
     }else{
         console.log('it is composite num')

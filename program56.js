@@ -9,50 +9,72 @@ covid_data = [
     [7,  'Kottayam',  27000,  1500,  27000,  14000,  1000],
     [8,  'Kollam',    14000,  2500,  25000,  18000,  2700]
 ]
+
+idukicase = covid_data.find((item)=>item[1]=='Idukki')
+console.log(idukicase)
+
+console.log("+++++++++++++++++++++++++")
 //1. district having Highest +ve case 
 
-disHigh = covid_data.reduce((dis1,dis2)=>dis2[2]>dis1[2]?dis1:dis2)
+disHigh = covid_data.reduce((dis1,dis2)=>dis1[3]>dis2[3]?dis1:dis2)
 console.log(disHigh)
 
-//2. district having Highest 1st dose vaccine
-firstDose = covid_data.reduce((dis1,dis2)=>dis2[6]>dis1[6]?dis1:dis2)
-console.log(firstDose)
 
-//3. district having lowest death rate
-lowDeath = covid_data.reduce((dis1,dis2)=>dis2[3]>dis1[3]?dis1:dis2)
-console.log(lowDeath)
 
-//4. arrange data with +ve case in descending order
+disx = covid_data.reduce((dis1,dis2)=>dis1[2]>dis2[2]?dis1:dis2)
+console.log(disx)
+
+// disHigh = covid_data.reduce((dis1,dis2)=>dis2[2]>dis1[2]?dis1:dis2)
+// console.log(disHigh)
+
+// //2. district having Highest 1st dose vaccine
+// firstDose = covid_data.reduce((dis1,dis2)=>dis2[6]>dis1[6]?dis1:dis2)
+// console.log(firstDose)
+
+// //3. district having lowest death rate
+// lowDeath = covid_data.reduce((dis1,dis2)=>dis2[3]>dis1[3]?dis1:dis2)
+// console.log(lowDeath)
+
+// //4. arrange data with +ve case in descending order
+
+// posDec = covid_data.sort((po1,po2)=>po2[2]-po1[2])
+// console.log(posDec)
 
 posDec = covid_data.sort((po1,po2)=>po2[2]-po1[2])
-console.log(posDec)
+console.log(posDec);
+// //5. is district with +ve cases > 15000
 
-//5. is district with +ve cases > 15000
+// b= covid_data.some((cocase)=>cocase[2]<=15000)
+// console.log(b?'yes':'no')
 
 b= covid_data.some((cocase)=>cocase[2]<=15000)
-console.log(b?'yes':'no')
+console.log(b)
 
-//6. arrange data with 1st dose vaccine ascending order
+// //6. arrange data with 1st dose vaccine ascending order
 
-vacAsc = covid_data.sort((do1,do2)=>do1[5]-do2[5])
-console.log(vacAsc)
+// vacAsc = covid_data.sort((do1,do2)=>do1[5]-do2[5])
+// console.log(vacAsc)
 
-//7. Print Thrissur details
 
-thrissur = covid_data.find((dis)=>dis[1]=='Thrissur')
-console.log(thrissur)
+// //7. Print Thrissur details
 
-//8. Print total number of positive cases
+// thrissur = covid_data.find((dis)=>dis[1]=='Thrissur')
+// console.log(thrissur)
 
-pcases = covid_data.map((item)=>item[2].reduce((pc1,pc2)=>pc1+pc2))
-console.log(pcases)
+thr = covid_data.find((dis)=>dis[1]=='Thrissur')
+console.log(thr)
 
-//9. Print total number of curred cases
+// //8. Print total number of positive cases
 
-curCases = covid_data.map((item)=>item[4].reduce((cc1, cc2)=>cc1+cc2))
-console.log(curCases)
+// pcases = covid_data.map((item)=>item[2].reduce((pc1,pc2)=>pc1+pc2))
+// console.log(pcases)
 
-//10. Print curred cases in Idukki
+// //9. Print total number of curred cases
 
-idduki = covid_data.find((item)=>item[1]=='Idukki')
-console.log(idduki[4])
+// curCases = covid_data.map((item)=>item[4].reduce((cc1, cc2)=>cc1+cc2))
+// console.log(curCases)
+
+// //10. Print curred cases in Idukki
+
+// idduki = covid_data.find((item)=>item[1]=='Idukki')
+// console.log(idduki[4])

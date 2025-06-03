@@ -26,26 +26,25 @@
 //     console.log("It is armstrong number");
 // }
 
+// armstrong num or not
+// num =15
+// res=0
+// orgNum = num 
+// digit=0
 
-num =1532
-res=0
-orgNum = num 
-digit=0
+// while(num!=0){
+//     digit = num % 10;
+//     res += Math.pow(digit,3);
+//     num=Math.floor(num/10);
+// }
+// if(res==orgNum){
+//     console.log('Its is armstrong')
+// }else{
+//     console.log('it not')
+// }
 
-while(num!=0){
-    digit = num % 10;
-    res += Math.pow(digit,3);
-    num=Math.floor(num/10);
-}
-if(res==orgNum){
-    console.log('Its is armstrong')
-}else{
-    console.log('it not')
-}
-
-
-console.log("----------------------------")
-console.log("----------------------------")
+// console.log("----------------------------")
+// console.log("----------------------------")
 
 // num=153 
 // digit = 0
@@ -77,3 +76,37 @@ console.log("----------------------------")
 //     num = Math.floor(num/10)
 // }
 // console.log(temp==sum? `armstrong`:`not an armstrong number`);
+
+
+num = 1534
+res = 0
+org = num
+dig = 0
+
+while(num!=0){
+ dig = num % 10;
+ res += Math.pow(dig, 3);
+ num = Math.floor(num/10)
+}
+if (res == org){
+    console.log("its armstrong num")
+ }else {
+    console.log("its not")
+ }
+
+// console.log("**********")
+
+
+
+
+
+// 2 ^3 ==>> write a program for making this
+// x = 2;
+// power = 3;
+// num = 1;
+
+// for(i =0; i < power; i++)   {
+//     num = num * x ;
+// }
+
+// console.log("its expo is", num);

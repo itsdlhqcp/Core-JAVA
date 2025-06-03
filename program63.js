@@ -1,4 +1,3 @@
-const { ImStarEmpty } = require("react-icons/im")
 
 products=[
     {pid:100,pName:'apple',band:'5g',price:120000,display:'led'},
@@ -8,39 +7,65 @@ products=[
     {pid:104,pName:'motorola',band:'4g',price:10000,display:'lcd'}
 ]
 
-//1. print product name only
 products.forEach((item)=>console.log(item.pName))
-console.log('--------------------------')
-//2. print all mobile details whose display is lcd
+
 for(pro of products){
-    if(pro.display=='lcd'){
+    if(pro.display == 'lcd'){
         console.log(pro)
     }
 }
-products.filter((pro)=>pro.display=='lcd').forEach((item)=>console.log(item))
-console.log('----------------------------------')
 
-//3. print 5g mobile phone name
-for(pro of products){
-    if(pro.band=='5g'){
-        console.log(pro.pName)
+for(band of products){
+    if(band.band == '5g'){
+        console.log(band)
     }
 }
 
-products.filter((pro)=>pro.band=='5g').forEach((item)=>console.log(item.pName))
-console.log('--------------------------')
+sortxx = products.sort((a,b)=>a.price-b.price)
+console.log(sortxx)
 
-//4. sort mobile based on price
+// //1. print product name only
+// products.forEach((item)=>console.log(item.pName))
+// console.log('--------------------------')
+// //2. print all mobile details whose display is lcd
+// for(pro of products){
+//     if(pro.display=='lcd'){
+//         console.log(pro)
+//     }
+// }
+// products.filter((pro)=>pro.display=='lcd').forEach((item)=>console.log(item))
+// console.log('----------------------------------')
 
-asorder = products.sort((pro1, pro2)=>pro1.price-pro2.price)
-console.log(asorder)
-console.log('--------------------------')
+// //3. print 5g mobile phone name
+// for(pro of products){
+//     if(pro.band=='5g'){
+//         console.log(pro.pName)
+//     }
+// }
 
-//5. print costly mobile
-costlyProduct = products.reduce((pro1,pro2)=>pro1.price<pro2.price?pro1:pro2)
-console.log(costlyProduct)
-console.log('--------------------------')
-//6. print low cost mobile
+// products.filter((pro)=>pro.band=='5g').forEach((item)=>console.log(item.pName))
+// console.log('--------------------------')
 
-cheapPro = products.reduce((pro1,pro2)=>pro1.price<pro2.price?pro1:pro2)
-console.log(cheapPro)
+// //4. sort mobile based on price
+
+ao = products.sort((a,b)=>a.price - b.price)
+console.log("sorted order is", ao)
+
+// asorder = products.sort((pro1, pro2)=>pro1.price-pro2.price)
+// console.log(asorder)
+// console.log('--------------------------')
+
+// //5. print costly mobile
+// costlyProduct = products.reduce((pro1,pro2)=>pro1.price<pro2.price?pro1:pro2)
+// console.log(costlyProduct)
+// console.log('--------------------------')
+console.log("-----------------------")
+costly = products.reduce((prox,proy)=>prox.price>proy.price? prox: proy)
+console.log(costly)
+// //6. print low cost mobile
+
+// cheapPro = products.reduce((pro1,pro2)=>pro1.price<pro2.price?pro1:pro2)
+// console.log(cheapPro)
+console.log("****************************")
+cheap = products.reduce((ch1,ch2)=>ch1.price > ch2.price? ch1.price: ch2.price)
+console.log(cheap)

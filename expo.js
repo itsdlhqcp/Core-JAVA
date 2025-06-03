@@ -38,11 +38,22 @@
 //     i++;
 // }
 
-let n = 2 
-let power = 3 
-num = 1 
-for(i=0; i < power; ++i){
-    num= num * n
-}
-console.log(num)
+// let n = 2 
+// let power = 3 
+// num = 1 
+// for(i=0; i < power; ++i){
+//     num= num * n
+// }
+// console.log(num)
 
+// expo of 2 of 3
+
+n = 2
+num = 1
+power =3
+
+for (i=0; i < power ; i++){
+    num = num * n
+}
+
+console.log(num);

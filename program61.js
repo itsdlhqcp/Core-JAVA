@@ -10,49 +10,59 @@ console.log(a[1]);
 console.log(employee.id)
 console.log(employee["name"])
 
-for(let key in employee){
-    console.log(employee[key])
+// for(let key in employee){
+//     console.log(employee[key])
+// }
+
+// // w.r .t a program to print whaether loc key is present in object or not
+// isPres = false
+// for(let key in employee){
+//     if(key=='loc'){
+//         isPres = true
+//     }
+// }
+
+console.log("*************************************")
+
+isP = false;
+for(let x in employee){
+   if(x == 'loc'){
+     isP = true
+   }
 }
+console.log(isP? "PRESENT":"NO")
 
-// w.r .t a program to print whaether loc key is present in object or not
-isPres = false
-for(let key in employee){
-    if(key=='loc'){
-        isPres = true
-    }
-}
+// console.log(isPres?'present':'not present');
 
-console.log(isPres?'present':'not present');
+// console.log('loc' in employee);
+// console.log(`loc is: ${'loc' in employee ?
+//     'present':'not present'}`);
 
-console.log('loc' in employee);
-console.log(`loc is: ${'loc' in employee ?
-    'present':'not present'}`);
+//     console.log('---------------------------')
 
-    console.log('---------------------------')
-
-    employee["age"]=35
-    console.log(employee);
+//     employee["age"]=35
+//     console.log(employee);
 
 
-    //w.a.p to check whaether Gender key is present or not in object 
-    isPres = false
-    for(let key in employee){
-      if(key=='xx'){
-          isPres = true
-         }
-      else{ 
-        employee["xx"]=11
+//     //w.a.p to check whaether Gender key is present or not in object 
+
+      isPresent = false
+      for(let key in employee){
+        if(key == "gn"){
+          isPresent = true
+        }else{
+           employee['gn']="trans"
+        }
       }
-     }
-    console.log(isPres?'present':'not present');
-    console.log(employee);
+      console.log(isPresent? "PRESNT": "NOOO")
+      console.log(employee)
 
-    'empGender' in employee? console.lo('present'):(employee["empGender"]='Male',console.log(employee));
+//     'empGender' in employee? console.lo('present'):(employee["empGender"]='Male',console.log(employee));
 
-  employee["status"]='Active'
-  console.log(employee);
+//   employee["status"]='Active'
+//   console.log(employee);
 
-  employee["status"]="InActive"
-  console.log(employee);
+//   employee["status"]="InActive"
+//   console.log(employee);
 
-console.log(delete employee.status?(console.log('deleted successfully'),console.log(employee)):console.log('not able to delete'))
+// console.log(delete employee.status?(console.log('deleted successfully'),console.log(employee)):console.log('not able to delete'))

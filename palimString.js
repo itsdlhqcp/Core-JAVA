@@ -1,80 +1,80 @@
-// x = 7 
-// y = 8 
-// console.log(`x and y are equal: `)
+// // x = 7 
+// // y = 8 
+// // console.log(`x and y are equal: `)
 
-isPalindrome=true 
-input = 'ooooooa'
-x=input.split('')
-a=0
-b=x.length-1
+// isPalindrome=true 
+// input = 'ooooooa'
+// x=input.split('')
+// a=0
+// b=x.length-1
 
-while(a<b){
-    if(x[a]==x[b]){
-        a++ 
-        b--
-    }else{
-        isPalindrome=false
-        break
-    }
-}
+// while(a<b){
+//     if(x[a]==x[b]){
+//         a++ 
+//         b--
+//     }else{
+//         isPalindrome=false
+//         break
+//     }
+// }
 
-console.log(isPalindrome ? 'string is palindrome': 'not')
-
-
-console.log('*****************************************************')
+// console.log(isPalindrome ? 'string is palindrome': 'not')
 
 
-//    *
-//   * *
-//  *   *
-// *     *
-//  *   *
-//   * *
-//    *
+// console.log('*****************************************************')
 
 
-    n=4
-    for (let i = 1; i <= n; i++) {                      // 1, 2, 3, 4 
-        let row = '';
-        // Create spaces before the first star
-        for (let j = 1; j <= n - i; j++) {             // 1 1<=3, 2 2<= 2 , 3 3<=1
+// //    *
+// //   * *
+// //  *   *
+// // *     *
+// //  *   *
+// //   * *
+// //    *
+
+
+//     n=4
+//     for (let i = 1; i <= n; i++) {                      // 1, 2, 3, 4 
+//         let row = '';
+//         // Create spaces before the first star
+//         for (let j = 1; j <= n - i; j++) {             // 1 1<=3, 2 2<= 2 , 3 3<=1
                                    
-            row += ' ';                               // " ", "  " , "   "
-        }
-        // Add the first star
-        row += '*';                                   // " ", "  " , "   ", "    *"
+//             row += ' ';                               // " ", "  " , "   "
+//         }
+//         // Add the first star
+//         row += '*';                                   // " ", "  " , "   ", "    *"
         
-        // Add spaces or second star based on the row number
-        if (i > 1) {
-            for (let j = 1; j <= (2 * (i - 1)) - 1; j++) {
-                row += ' ';                           // " ", "  " , "  *", "  * *"
-            }                                         // " ", "  " , "  *", "  *  *"
-            row += '*';
-        }
+//         // Add spaces or second star based on the row number
+//         if (i > 1) {
+//             for (let j = 1; j <= (2 * (i - 1)) - 1; j++) {
+//                 row += ' ';                           // " ", "  " , "  *", "  * *"
+//             }                                         // " ", "  " , "  *", "  *  *"
+//             row += '*';
+//         }
         
-        console.log(row);
-    }
+//         console.log(row);
+//     }
 
-    // Loop through the lower half of the pattern
-    for (let i = n - 1; i >= 1; i--) {
-        let row = '';
-        // Create spaces before the first star
-        for (let j = 1; j <= n - i; j++) {
-            row += ' ';
-        }
-        // Add the first star
-        row += '*';
+//     // Loop through the lower half of the pattern
+//     for (let i = n - 1; i >= 1; i--) {
+//         let row = '';
+//         // Create spaces before the first star
+//         for (let j = 1; j <= n - i; j++) {
+//             row += ' ';
+//         }
+//         // Add the first star
+//         row += '*';
         
-        // Add spaces or second star based on the row number
-        if (i > 1) {
-            for (let j = 1; j <= (2 * (i - 1)) - 1; j++) {
-                row += ' ';
-            }
-            row += '*';
-        }
+//         // Add spaces or second star based on the row number
+//         if (i > 1) {
+//             for (let j = 1; j <= (2 * (i - 1)) - 1; j++) {
+//                 row += ' ';
+//             }
+//             row += '*';
+//         }
         
-        console.log(row);
-    }
+//         console.log(row);
+//     }
 
 
 
@@ -107,87 +107,153 @@ console.log('*****************************************************')
         }
     ]
 
-    
-  console.log("------------------------------------------------------------")
-  // program to print the name of the cars
     cars.forEach((item)=>console.log(item.make))
+    cars.forEach((item)=>console.log(item.id))
+    cars.forEach((item)=>console.log(item.price))
+    console.log("------------------------------------------------------------")
+    cars.forEach((item)=>console.log(item.model))
 
-console.log("------------------------------------------------------------")
 
-  cars.forEach(car => {
-    if (car.price > 30000){
-        console.log(car.model)
+//   console.log("------------------------------------------------------------")
+//   // program to print the name of the cars
+//     cars.forEach((item)=>console.log(item.make))
+
+// console.log("------------------------------------------------------------")
+
+//   cars.forEach(car => {
+//     if (car.price > 30000){
+//         console.log(car.model)
+//     }
+//   })
+
+//   console.log("------------------------------------------------------------") 
+
+//   //PRINT OUT STOCK CARS 
+
+//   console.log("Stock cars available are:")
+//   cars.forEach(car => {
+//     if(car.inStock=='yes'){
+//         console.log(car.make)
+//     }
+//   })
+
+//   console.log("------------------------------------------------------------")
+//   // print cars whose hourse power greater than or equal to 300
+
+//   cars.forEach(car =>{
+//     if(car.features.horsepower>=300){
+//         console.log(car.make)
+//     }
+//   })
+
+//   console.log("-------------------------------------------------------------")
+//   //what will be revenue generated if all the cars are sold out 
+//   const rev = cars.reduce((total, car)=> total + car.price , 0)
+//   console.log(rev)
+
+
+//   console.log("-------------------------------------------------")
+//   console.log("-------------------------------------------------") 
+
+//   console.log("CREATE A LIBRARY CLASS")
+
+//   class Library {
+//     constructor(){
+//         this.collections = {}
+//     }
+
+//     addBook(title, author,year, availablity){
+//         this.collections[title] = {
+//             title: title, 
+//             author: author,
+//             year: year,
+//             availablity: availablity
+//         }
+//     }
+
+//     displayCollections(){
+//         console.log("Collection: are here");
+//         for(const book in this.collections)
+//             console.log(`Title: ${this.collections[book].title} - Author: ${this.collections[book].author}, - Year: ${this.collections[book].year} , - availablity: ${this.collections[book].availablity}` )
+//     } 
+
+//     deleteBook(title){
+//         if(this.collections[title]){
+//             delete this.collections[title]
+//             console.log(`${title} has been deleted`);
+//         }else{
+//             console.log(`${title} not found in the collections`)
+//         }
+//     }
+//   }
+
+//   const myLibrary = new Library();
+//   myLibrary.addBook("Harry Potter","J.K Rowlling","2007","yes");
+//   myLibrary.addBook("HK Miller","R.K katanm","2009","no");
+//   myLibrary.addBook("The story of myLife","Hellen kELLER","2005","yes");
+//   myLibrary.addBook("JACK DANIEL","Jack Daniel","2004","yes");
+//  console.log("----------------------------------------------")
+
+//   myLibrary.displayCollections();
+//   myLibrary.deleteBook("HK Miller");
+//   myLibrary.displayCollections();
+
+
+
+// string = 'ooo';
+// split = string.split('');
+// a = 0;
+// b = split.length -1;
+// isPal = true
+
+// while(a<b){
+//     if(split[a]==split[b]){
+//         a++;
+//         b--;
+//     }else{
+//         isPal = false;
+//         break;
+//     }
+// }
+
+// console.log(isPal ? "its a palindrome": "not a palindrome");
+
+
+// cars.forEach(cars 
+//     if(cars.price > 30000){
+//         console.log(cars.model)
+//     }
+// )
+
+cars.forEach(cars=>{
+    if(cars.price > 30000){
+        console.log(cars.model)
     }
-  })
+})
 
-  console.log("------------------------------------------------------------") 
+console.log('$$$$$$$$$$$$$$$$')
+// make:"Chevorlet"
 
-  //PRINT OUT STOCK CARS 
-
-  console.log("Stock cars available are:")
-  cars.forEach(car => {
-    if(car.inStock=='yes'){
-        console.log(car.make)
+cars.forEach(make=>{
+    if(make.make == "Chevorlet"){
+        console.log("car is present in gaarage")
     }
-  })
+})
 
-  console.log("------------------------------------------------------------")
-  // print cars whose hourse power greater than or equal to 300
+console.log('$$$$$$$$$$$$$$$$   xxxxxxxxxxxxxxx')
 
-  cars.forEach(car =>{
-    if(car.features.horsepower>=300){
-        console.log(car.make)
-    }
-  })
-
-  console.log("-------------------------------------------------------------")
-  //what will be revenue generated if all the cars are sold out 
-  const rev = cars.reduce((total, car)=> total + car.price , 0)
-  console.log(rev)
-
-
-  console.log("-------------------------------------------------")
-  console.log("-------------------------------------------------") 
-
-  console.log("CREATE A LIBRARY CLASS")
-
-  class Library {
-    constructor(){
-        this.collections = {}
-    }
-
-    addBook(title, author,year, availablity){
-        this.collections[title] = {
-            title: title, 
-            author: author,
-            year: year,
-            availablity: availablity
+cars.forEach(
+    cars =>{
+        if(cars.inStock=='No'){
+            console.log(cars.make)
         }
     }
+)
 
-    displayCollections(){
-        console.log("Collection: are here");
-        for(const book in this.collections)
-            console.log(`Title: ${this.collections[book].title} - Author: ${this.collections[book].author}, - Year: ${this.collections[book].year} , - availablity: ${this.collections[book].availablity}` )
-    } 
-
-    deleteBook(title){
-        if(this.collections[title]){
-            delete this.collections[title]
-            console.log(`${title} has been deleted`);
-        }else{
-            console.log(`${title} not found in the collections`)
+cars.forEach(
+    cars => {
+        if(cars.features.horsepower>=300){
+            console.log(cars.make)
         }
     }
-  }
-
-  const myLibrary = new Library();
-  myLibrary.addBook("Harry Potter","J.K Rowlling","2007","yes");
-  myLibrary.addBook("HK Miller","R.K katanm","2009","no");
-  myLibrary.addBook("The story of myLife","Hellen kELLER","2005","yes");
-  myLibrary.addBook("JACK DANIEL","Jack Daniel","2004","yes");
- console.log("----------------------------------------------")
-
-  myLibrary.displayCollections();
-  myLibrary.deleteBook("HK Miller");
-  myLibrary.displayCollections();
+)

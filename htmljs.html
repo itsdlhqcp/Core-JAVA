@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html doc study</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoFdENW3QFZfEn9wG1E2iZjE+6sN0k+X4WZRGmEkD4a1P7x"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="p-4">
+    <h1>Document object model</h1>
+    <h1 id="dom" class="cls">DOM</h1>
+    <p class="cls">
+      Hello how are you doing here in the past of the days here !!
+    </p>
+    <button class="btn btn-primary" onclick="change()">Change DOM</button>
+
+    <h1 id="eligible">Voting Eligibility</h1>
+    <div class="row w-100">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="p-5 mt-5 border">
+                 <h1 class="text-center text-success">Voting Eligibility</h1>
+                 <div class="mt-5 d-flex">
+                    <input id="age" type="text" placeholder="Enter your age" class="form-control" aria-label="Username">
+                    <button class="btn btn-success me-3" onclick="agechecker()">Check</button>
+                    <h3 class="text-center text-success" id="result"></h3>
+                 </div>
+            </div> 
+        </div>
+    </div>
+
+    <script>
+          // get element - getElementsByTagName
+    //const res = document.getElementsByTagName('h1');
+    //  console.log(res[0]);
+
+    // const dom = document.getElementsByTagName('h1');
+    // console.log(dom[1]);
+
+    // const dom = document.getElementById("dom");
+     // console.log(dom);
+
+    //const res = document.getElementsByClassName('cls');
+    // console.log(res[0]);
+
+   // const res = document.querySelector('#id');
+   // console.log(res);
+   // const res = document.getElementById('dom');
+   // res.innerHTML = 'Hello World';
+   // res.style.color = 'red';
+   // res.style.fontSize = '20px';
+
+   // const para = document.querySelector('p')
+   // para.style.color = 'blue'
+   // para.style.fontSize = '25px'
+   // para.style.fontFamily = 'Arial'
+      function change() {
+        const res = document.getElementById("dom");
+        res.innerHTML = "Hello World";
+        res.style.color = "red";
+        res.style.fontSize = "20px";
+      }
+
+      function agechecker() {
+        const age = document.getElementById("age")?.value;
+        console.log(age);
+        if(age){
+            if (age <= 18) {
+                alert("You are not eligible to vote");
+              const eli = document.getElementById("result");
+              eli.innerHTML = "You are not eligible to vote";
+              eli.style.color = "red";
+              eli.style.fontSize = "12px";
+            } else {
+                alert("You are eligible to vote");
+              const noteli = document.getElementById("result");
+              noteli.innerHTML = "You are eligible to vote";
+              noteli.style.color = "green";
+              noteli.style.fontSize = "12px";
+            }
+        }else if (isNaN(age) === true) {
+            alert("Please enter a valid age");
+            const noteli = document.getElementById("result");
+            noteli.innerHTML = "Please enter a valid age";
+            noteli.style.color = "orange";
+            noteli.style.fontSize = "12px";
+        }else {
+            alert("Please enter a valid age");
+            const noteli = document.getElementById("result");
+            noteli.innerHTML = "Please enter value";
+            noteli.style.color = "red";
+            noteli.style.fontSize = "12px";
+        }
+      }
+    </script>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-q2gyI3p86hR2FJQnPvZyRw6M8MdQK6Xyf2Y2kq1VBO5DXT6B+SguKkIsvL2k4o5S"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
